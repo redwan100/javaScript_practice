@@ -219,12 +219,13 @@ const person = [
 // console.log(result);
 
 
-const mapped = person.map((value) => {
-    return {
-        ...value,
-        mgs:`Hello MR. ${value.name} your result is published and you ${value.cgp < 3 ? 'filed':'passed'}`
-    }
-})
+// const mapped = person.map((value) => {
+//     return {
+//         ...value,
+//         mgs:`Hello MR. ${value.name} your result is published and you ${value.cgp < 3 ? 'filed':'passed'}`
+//     }
+// })
 
-console.log(mapped);
+// console.log(mapped);
+
 

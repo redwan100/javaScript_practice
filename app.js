@@ -229,3 +229,218 @@ const person = [
 // console.log(mapped);
 
 
+
+// const toUpperCase = (str) => {
+//     let word = [];
+//     for (let ele of str.split(' ')) {
+//         word.push(ele[0].toUpperCase() + ele.slice(1))
+//     }
+//     return word.join(' ')
+// };
+
+// console.log(toUpperCase('i love programming, programming is a smart passion'));
+
+
+// const lessThen = (num) => {
+//     if (num <= 5) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(lessThen(5));
+
+// 5. Basketball Points
+// Description: You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
+// function points(twoPointers, threePointers) {
+// 	//start here
+// }
+// Examples:
+// points(1, 1) ➞ 5
+// points(7, 5) ➞ 29
+// points(38, 8) ➞ 100
+
+
+// function points(twoPointers, threePointers) {
+//     return (twoPointers * 2) + (threePointers * 3)
+// }
+
+// console.log(points(1, 1));
+
+
+
+
+
+
+// 6. Basic Variable Assignment
+// Description: A student learning JavaScript was trying to make a function. His code should concatenate a passed string name with string "JavaScript" and store it in a variable called result. He needs your help to fix this code.
+// function nameString(name){
+// 	// store the string "JavaScript" to a variable
+// 	// concate the string "JavaScript" with name and assign it to an another variable called result
+// 	// finally don't for to return
+// }
+// Examples:
+// nameString("Zahidul") ➞ "ZahidulJavaScript"
+// nameString("Bogra") ➞ "BograJavaScript"
+// nameString("javaScript") ➞ "javaScriptJavaScript"
+
+// function nameString(name) {
+//     let result = 'JavaScript';
+//     return name + result;
+// }
+
+// console.log(nameString("Bogra"));
+
+
+
+
+// 7. Less Than 100?
+// Description: Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+// function lessThan100(a, b) {
+// 	//start here
+// }
+// Examples:
+// lessThan100(22, 15) ➞ true
+// lessThan100(83, 34) ➞ false
+// lessThan100(3, 77) ➞ true
+
+// function lessThen100(a, b) {
+//     if (a > b) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+    
+// }
+
+// console.log(lessThen100(84,35));
+
+
+
+
+// 8. Buggy Code
+// Description: Your friend created an infinite loop! Help him by fixing the code in the code tab to pass this challenge. Look at the examples below to get an idea of what the function should do.
+// function printArray(number) {
+//   var newArray = [];
+
+//   for(var i = 1; i <= number;) {
+//     newArray.push(i);
+//   }
+
+//   return newArray;
+// }
+// Examples
+// printArray(1) ➞ [1]
+// printArray(3) ➞ [1, 2, 3]
+// printArray(6) ➞ [1, 2, 3, 4, 5, 6]
+
+
+// function printArray(number) {
+//     var newArray = [];
+//     for (var i = 1; i <= number; i++){
+//         newArray.push(i);
+//     }
+//     return newArray;
+// }
+
+// console.log(printArray(6));
+
+
+
+
+// 9. The Farm Problem
+// Description: In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+// function animals(chickens, cows, horses) {
+// 	//start here
+// }
+// Examples
+// animals(2, 3, 5) ➞ 36
+// animals(1, 2, 3) ➞ 22
+// animals(5, 2, 8) ➞ 50
+
+// function animals(chicken, cows, heros) {
+//     return (chicken * 2) + (cows * 4) + (heros * 4);
+// }
+
+// console.log(animals(1, 2, 3));
+
+
+// 10. Using the "&&" Operator
+// Description: JavaScript has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
+// function and(a, b) {
+// 	//start here
+// }
+// Examples
+// and(true, false) ➞ false
+// and(true, true) ➞ true
+// and(false, true) ➞ false
+// and(false, false) ➞ false
+
+
+// function and(a, b) {
+//     if (a && b ) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(and(false, false));
+
+
+// function and(a, b) {
+//     const result = a & b ? true : false;
+//     return result;
+// }
+
+// console.log(and(false, false));
+
+
+// function findLargestNumber(arr) {
+//     let highest = 0;
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] > highest) {
+//             highest = arr[i];
+//         }
+//     }
+//     return highest
+// }
+
+// console.log(findLargestNumber([1, 2, 3, 5, 77, 22]));
+
+// const arr = [3, 6, 8, 4, 9, 1];
+
+// console.log(arr);
+
+// function large(arr) {
+//     const sortArr = arr.sort((a, b) => a - b);
+// return sortArr[sortArr.length - 1];
+// }
+
+// console.log(large(arr));
+
+
+const showTime = (time) => {
+    let currentTime = '';
+    if (time >= 12) {
+        currentTime = 'pm';
+    } else {
+        currentTime = 'am';
+    }
+    
+    if (time > 12) {
+        console.log(currentTime =time - 12);
+    }
+
+
+
+
+    return currentTime
+}
+
+console.log(showTime(2));
+console.log(showTime(12));
+
+
+

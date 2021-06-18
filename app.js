@@ -219,37 +219,34 @@ const person = [
 // console.log(result);
 
 
-// const mapped = person.map((value) => {
-//     return {
-//         ...value,
-//         mgs:`Hello MR. ${value.name} your result is published and you ${value.cgp < 3 ? 'filed':'passed'}`
-//     }
-// })
+const mapped = person.map((value) => {
+    return {
+        ...value,
+        mgs:`Hello MR. ${value.name} your result is published and you ${value.cgp < 3 ? 'filed':'passed'}`
+    }
+})
 
-// console.log(mapped);
-
-
-
-// const toUpperCase = (str) => {
-//     let word = [];
-//     for (let ele of str.split(' ')) {
-//         word.push(ele[0].toUpperCase() + ele.slice(1))
-//     }
-//     return word.join(' ')
-// };
-
-// console.log(toUpperCase('i love programming, programming is a smart passion'));
+console.log(mapped);
 
 
-// const lessThen = (num) => {
-//     if (num <= 5) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
 
-// console.log(lessThen(5));
+const toUpperCase = (str) => {
+    let word = [];
+    for (let ele of str.split(' ')) {
+        word.push(ele[0].toUpperCase() + ele.slice(1))
+    }
+    return word.join(' ')
+};
+
+console.log(toUpperCase('i love programming'));
+
+
+const lessThen = (num) => {
+
+    return x = num <= 5 ? true : false;
+}
+
+console.log(lessThen(5));
 
 // 5. Basketball Points
 // Description: You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
@@ -262,11 +259,11 @@ const person = [
 // points(38, 8) ➞ 100
 
 
-// function points(twoPointers, threePointers) {
-//     return (twoPointers * 2) + (threePointers * 3)
-// }
+function points(twoPointers, threePointers) {
+    return (twoPointers * 2) + (threePointers * 3)
+}
 
-// console.log(points(1, 1));
+console.log(points(1, 1));
 
 
 
@@ -285,12 +282,12 @@ const person = [
 // nameString("Bogra") ➞ "BograJavaScript"
 // nameString("javaScript") ➞ "javaScriptJavaScript"
 
-// function nameString(name) {
-//     let result = 'JavaScript';
-//     return name + result;
-// }
+function nameString(name) {
+    let result = 'JavaScript';
+    return name + result;
+}
 
-// console.log(nameString("Bogra"));
+console.log(nameString("Bogra"));
 
 
 
@@ -305,16 +302,13 @@ const person = [
 // lessThan100(83, 34) ➞ false
 // lessThan100(3, 77) ➞ true
 
-// function lessThen100(a, b) {
-//     if (a > b) {
-//         return true;
-//     } else {
-//         return false;
-//     }
+function lessThen100(a, b) {
+    let sum = a + b;
+    return x = sum < 100 ? true : false;
     
-// }
+}
 
-// console.log(lessThen100(84,35));
+console.log(lessThen100(3,77));
 
 
 
@@ -336,15 +330,15 @@ const person = [
 // printArray(6) ➞ [1, 2, 3, 4, 5, 6]
 
 
-// function printArray(number) {
-//     var newArray = [];
-//     for (var i = 1; i <= number; i++){
-//         newArray.push(i);
-//     }
-//     return newArray;
-// }
+function printArray(number) {
+    var newArray = [];
+    for (var i = 1; i <= number; i++){
+        newArray.push(i);
+    }
+    return newArray;
+}
 
-// console.log(printArray(6));
+console.log(printArray(6));
 
 
 
@@ -421,26 +415,234 @@ const person = [
 // console.log(large(arr));
 
 
-const showTime = (time) => {
-    let currentTime = '';
-    if (time >= 12) {
-        currentTime = 'pm';
+
+
+
+const showTime = (hour) => {
+    if (hour > 0 && hour < 12) {
+        return  hour + 'am'
+    } else if (hour > 12 && hour < 24) {
+        return (hour - 12) + 'pm';
+    } else if (hour === 24) {
+        return '00' + 'pm';
     } else {
-        currentTime = 'am';
+        return 'please type some number';
     }
-    
-    if (time > 12) {
-        console.log(currentTime =time - 12);
-    }
-
-
-
-
-    return currentTime
+   
 }
 
-console.log(showTime(2));
-console.log(showTime(12));
+console.log(showTime(22));
 
+// const showTime = (hour) => {
+//     if (hour > 0 && hour < 12) {
+//         return hour + 'am';
+//     }
+//     if (hour > 12 && hour < 24) {
+//         return (hour - 12) + 'pm';
+//     }
+//     if (hour === 24) {
+//         return '00' + 'pm';
+//     }
+//     if (!hour || hour > 24) {
+//         return 'please type some number';
+//     }
+// }
+
+
+
+// console.log(showTime(25));
+
+
+
+
+
+// function showEvenAndOddNum (arr)  {
+//     let evenAndOddArr = [[], []];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 === 0) {
+//             evenAndOddArr[0].push(arr[i])   
+//         } else {
+//             evenAndOddArr[1].push(arr[i])
+//         }
+        
+//     }
+//     return evenAndOddArr;
+// }
+
+// console.log(showEvenAndOddNum([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+
+
+
+
+
+
+
+
+
+// function showEvenAndOddNum(arr) {
+//     let evenArr = [];
+//     let oddArr = [];
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] % 2 === 0) {
+//             evenArr.push(arr[i])
+//         } else {
+//             oddArr.push(arr[i])
+//         }
+//     }
+//     return [evenArr, oddArr];
+// }
+
+// console.log(showEvenAndOddNum([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+
+
+
+
+// 1. Are the Numbers Equal?
+// Description: Create a function that returns true when num1 is equal to num2; otherwise return false.
+// function isSameNum(num1, num2) {
+// 	// start here
+// }
+// Examples
+// isSameNum(4, 8) ➞ false
+// isSameNum(2, 2) ➞  true
+// isSameNum(2, "2") ➞ false
+// Notes: Don't forget to return the result.
+
+function isSameNum(num1, num2) {
+    return isEqual = num1 === num2 ? true : false;
+}
+console.log(isSameNum(4,8));
+
+// 2. Football Points
+// Description: Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far.
+// consider the below notes:
+// wins get 3 points
+// draws get 1 point
+// losses get 0 points
+// function footballPoints(wins, draws, losses) {
+// 	// code here
+// }
+// Examples
+// footballPoints(3, 4, 2) ➞ 13
+// footballPoints(5, 0, 2) ➞ 15
+// footballPoints(0, 0, 1) ➞ 0
+// Notes: Inputs will be numbers greater than or equal to 0.
+
+
+function footballPoints(wins, draw, losses) {
+    return (wins * 3) + (draw * 1) + (losses * 0);
+}
+
+console.log(footballPoints(3, 4, 2));
+
+
+// 3. Convert Hours and Minutes into Seconds
+// Description: Write a function that takes two integers (hours, minutes), converts them to seconds, and adds them.
+// function convert(hours, minutes) {
+// 	// happy coding
+// }
+// Examples
+// convert(1, 3) ➞ 3780
+// convert(2, 0) ➞ 7200
+// convert(0, 0) ➞ 0
+
+
+function convert(hours, minute) {
+    return (hours * 60) *60 +(minute * 60);
+}
+
+console.log(convert(1,3));
+
+
+
+// 4. Fix the Expression
+// Description: Fix the code in the Code tab so the function returns true if and only if x is equal to 7.
+// function isSeven(x) {
+// 	return x="7"?false:true:false;
+// }
+// Examples
+// isSeven(4) ➞ false
+// isSeven(9) ➞ false
+// isSeven(7) ➞ true
+
+function isSeven(x) {
+    return x = x == '7' ? true : false;
+}
+console.log(isSeven(7));
+
+
+
+
+// 5. Equality Check
+// Description: In this challenge, you must verify the equality of two different values given the parameters a and b.
+
+// consider the following:
+// Both the value and type of the parameters need to be equal. The possible types of the given parameters are:
+
+// Numbers
+// Strings
+// Booleans (false or true)
+// Special values: undefined, null and NaN
+// function checkEquality(a, b) {
+//   //code here
+// }
+// Examples
+// checkEquality(1, true) ➞ false
+// checkEquality(0, "0") ➞ false
+// checkEquality(1,  1) ➞ true
+// From Jahidul Islam to Everyone:  11:50 PM
+
+
+function checkEquality(a, b) {
+    return x = a === b ? true : false;
+}
+
+console.log(checkEquality(1, 1));
+
+
+// 6. Profitable Gamble
+// Description: Create a function that takes three arguments prob, prize, pay and returns true if prob * prize > pay; otherwise return false.
+// function profitableGamble(prob, prize, pay) {
+// 	// code here
+// }
+
+// Examples
+// profitableGamble(0.2, 50, 9) ➞ true
+// profitableGamble(0.9, 1, 2) ➞ false
+// profitableGamble(0.9, 3, 2) ➞ true
+
+function profitableGamble(prob, prize, pay) {
+    return prob * prize > pay;
+}
+
+console.log(profitableGamble(0.2, 50, 9));
+
+// 7. Add up the Numbers from a Single Number
+// Description: Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+// function addUp(num) {
+// 	// code here
+// }
+// Examples
+// addUp(4) ➞ 10
+// addUp(13) ➞ 91
+// addUp(600) ➞ 180300
+
+
+
+
+function addUp(num) {
+    let result = 0;
+    for (let i = 1; i <= num; i++){
+       
+        result += i;
+    }
+    
+    return result
+}
+
+console.log(addUp(13));
+console.log('something is awesome');
 
 

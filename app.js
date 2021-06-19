@@ -633,15 +633,15 @@ console.log(profitableGamble(0.2, 50, 9));
 
 
 
-function addUp(num) {
-    let result = 0;
-    for (let i = 1; i <= num; i++){
+// function addUp(num) {
+//     let result = 0;
+//     for (let i = 1; i <= num; i++){
        
-        result += i;
-    }
+//         result += i;
+//     }
     
-    return result
-}
+//     return result
+// }
 
-console.log(addUp(13));
+// console.log(addUp(13));
 

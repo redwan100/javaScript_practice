@@ -633,15 +633,26 @@ console.log(profitableGamble(0.2, 50, 9));
 
 
 
-// function addUp(num) {
-//     let result = 0;
-//     for (let i = 1; i <= num; i++){
+function addUp(num) {
+    let result = 0;
+    for (let i = 1; i <= num; i++){
        
-//         result += i;
-//     }
+        result += i;
+    }
     
-//     return result
-// }
+    return result
+}
 
-// console.log(addUp(13));
+console.log(addUp(13));
 
+
+
+function upperCase(str) {
+    let upStr = [];
+    for (let element of str.split(' ')) {
+        upStr.push(element[0].toUpperCase() + element.slice(1))
+    }
+    return upStr.join(' ')
+}
+
+console.log(upperCase('i love programming'));

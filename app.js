@@ -248,6 +248,7 @@ const lessThen = (num) => {
 
 console.log(lessThen(5));
 
+
 // 5. Basketball Points
 // Description: You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
 // function points(twoPointers, threePointers) {
@@ -643,6 +644,4 @@ function addUp(num) {
 }
 
 console.log(addUp(13));
-console.log('something is awesome');
-
 

@@ -599,17 +599,5 @@ function multiple(numArr) {
 console.log(multiple([0, 1, 0, 2, 3, 4, 5, 0]));
 
 
-function *generator(start, end, step) {
-  let current = start;
-  while (start <= end) {
-    yield current
-    current += step;
-  }
-}
-
-const iterator = generator(1, 100, 2);
-console.log(iterator.next());
-console.log(iterator.next());
-
 
 

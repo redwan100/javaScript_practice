@@ -600,4 +600,33 @@ console.log(multiple([0, 1, 0, 2, 3, 4, 5, 0]));
 
 
 
+// TODO: Extra problem solving
+
+function getLength(str) {
+  let newStr = '';
+  if (str[0] < "Z") {
+    for (let i = 0; i < str.length; i++){
+      if (str[i] < "Z") {
+        newStr += str[i];
+      }
+    }
+     return `The length of capital letter => ${newStr.length}`
+    
+  } else if (str[0] > 'Z') {
+    for (let i = 0; i < str.length; i++){
+      if (str[i] > 'Z') {
+        newStr += str[i];
+      }
+    }
+    return `The length of small letter => ${newStr.length}`
+  } else if (newStr.length === 0) {
+    return `please put some string`
+  }
+  
+  
+}
+
+console.log(getLength('JaVaScript'));
+console.log(getLength('prgRrMminG'));
+console.log(getLength(''));
 

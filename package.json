@@ -1,0 +1,22 @@
+{
+  "name": "js_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "nodemon":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redwan100/javaScript_practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redwan100/javaScript_practice/issues"
+  },
+  "homepage": "https://github.com/redwan100/javaScript_practice#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

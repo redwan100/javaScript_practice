@@ -1,44 +1,25 @@
-// const getButton = document.getElementById("get-button");
-// const sentButton = document.getElementById("sent-button");
-
-// const getData = function () {
-//   const xhr = new XMLHttpRequest();
-//   xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1");
-//   xhr.responseType = "json";
-//   xhr.send();
-//   xhr.onload = () => {
-//     const result = xhr.response;
-//     console.log(result);
-//   };
-// };
-// const sentData = function () {};
-
-// getButton.addEventListener("click", getData);
-// sentButton.addEventListener("click", sentData);
-
-// let names = [
-//   "redwan",
-//   "redwan",
-//   "redwan",
-//   "israfil",
-//   "israfil",
-//   "farid",
-//   "farid",
-//   "injabul",
-//   "injabul",
-// ];
-// function removeDuplicateName(name) {
-//   let selected = [];
-//   for (let i = 0; i < name.length; i++) {
-//     let myNames = name[i];
-//     if (selected.indexOf(myNames) === -1) {
-//       selected.push(myNames);
-//     }
-//   }
-//   return selected;
-// }
-
-// console.log(removeDuplicateName(names));
+let names = [
+  "redwan",
+  "redwan",
+  "redwan",
+  "israfil",
+  "israfil",
+  "farid",
+  "farid",
+  "injabul",
+  "injabul",
+];
+function removeDuplicateName(name) {
+  let selected = [];
+  for (let i = 0; i < name.length; i++) {
+    let myNames = name[i];
+    if (selected.indexOf(myNames) === -1) {
+      selected.push(myNames);
+    }
+  }
+  return selected;
+}
+console.log(removeDuplicateName(names));
 
 // const reversed = (num) => {
 //   let reversed = num.toString().split("").reverse().join("");
@@ -46,6 +27,13 @@
 // };
 
 // console.log(reversed(-123));
+
+const reversed = (str) => {
+  let rev = str.split(" ").reverse().join();
+  return rev;
+};
+
+console.log(reversed("love"));
 
 // const palindrome = (str) => {
 //   let strArr = str.split("");
@@ -83,7 +71,7 @@
 
 // console.log(capital(string));
 
-// const str = "madam";
+const str = "madam";
 // const palindrome = () => {
 //   let strArr = str.split("");
 //   let isPalindrome = false;
@@ -92,7 +80,6 @@
 //       isPalindrome = false;
 //       break;
 //     }
-//     console.log(strArr[i]);
 //     return (isPalindrome = true);
 //   }
 //   return isPalindrome;
@@ -182,72 +169,78 @@
 //     })
 // })
 
-
-
-
-
 const person = [
-    {
-        name:'Redwan islam', id:1, cgp:2.5
-    },
-    {
-        name:'Farid islam', id:7, cgp:4.5
-    },
-    {
-        name:'Israfil islam', id:3, cgp:3.5
-    },
-    {
-        name:'Injabul islam', id:4, cgp:2.5
-    },
-    {
-        name:'Majnu islam', id:5, cgp:2
-    },
-    {
-        name: 'Hasib islam', id: 6, cgp: 3
-    },
-    {
-        name: 'Rohim islam', id: 2, cgp: 1.5
-    }
-]
+  {
+    name: "Redwan islam",
+    id: 1,
+    cgp: 2.5,
+  },
+  {
+    name: "Farid islam",
+    id: 7,
+    cgp: 4.5,
+  },
+  {
+    name: "Israfil islam",
+    id: 3,
+    cgp: 3.5,
+  },
+  {
+    name: "Injabul islam",
+    id: 4,
+    cgp: 2.5,
+  },
+  {
+    name: "Majnu islam",
+    id: 5,
+    cgp: 2,
+  },
+  {
+    name: "Hasib islam",
+    id: 6,
+    cgp: 3,
+  },
+  {
+    name: "Rohim islam",
+    id: 2,
+    cgp: 1.5,
+  },
+];
 
 // const arr = [1, 2, 3, 4, 5, 6];
 // const result = arr.reduce((prev,cur) => {
 //     return prev + cur;
-    
+
 // }, 0)
 
 // console.log(result);
 
-
 const mapped = person.map((value) => {
-    return {
-        ...value,
-        mgs:`Hello MR. ${value.name} your result is published and you ${value.cgp < 3 ? 'filed':'passed'}`
-    }
-})
+  return {
+    ...value,
+    mgs: `Hello MR. ${value.name} your result is published and you ${
+      value.cgp < 3 ? "filed" : "passed"
+    }`,
+  };
+});
 
 console.log(mapped);
 
-
-
 const toUpperCase = (str) => {
-    let word = [];
-    for (let ele of str.split(' ')) {
-        word.push(ele[0].toUpperCase() + ele.slice(1))
-    }
-    return word.join(' ')
+  let word = [];
+  for (let ele of str.split(" ")) {
+    word.push(ele[0].toUpperCase() + ele.slice(1));
+  }
+  return word.join(" ");
 };
 
-console.log(toUpperCase('i love programming'));
-
+console.log(toUpperCase("i love programming"));
 
 const lessThen = (num) => {
-
-    return x = num <= 5 ? true : false;
-}
+  return (x = num <= 5 ? true : false);
+};
 
 console.log(lessThen(5));
-
 
 // 5. Basketball Points
 // Description: You are counting points for a basketball game, given the amount of 2-pointers scored and 3-pointers scored, find the final points for the team and return that value.
@@ -259,17 +252,11 @@ console.log(lessThen(5));
 // points(7, 5) ➞ 29
 // points(38, 8) ➞ 100
 
-
 function points(twoPointers, threePointers) {
-    return (twoPointers * 2) + (threePointers * 3)
+  return twoPointers * 2 + threePointers * 3;
 }
 
 console.log(points(1, 1));
-
-
-
-
-
 
 // 6. Basic Variable Assignment
 // Description: A student learning JavaScript was trying to make a function. His code should concatenate a passed string name with string "JavaScript" and store it in a variable called result. He needs your help to fix this code.
@@ -284,14 +271,11 @@ console.log(points(1, 1));
 // nameString("javaScript") ➞ "javaScriptJavaScript"
 
 function nameString(name) {
-    let result = 'JavaScript';
-    return name + result;
+  let result = "JavaScript";
+  return name + result;
 }
 
 console.log(nameString("Bogra"));
-
-
-
 
 // 7. Less Than 100?
 // Description: Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
@@ -304,15 +288,11 @@ console.log(nameString("Bogra"));
 // lessThan100(3, 77) ➞ true
 
 function lessThen100(a, b) {
-    let sum = a + b;
-    return x = sum < 100 ? true : false;
-    
+  let sum = a + b;
+  return (x = sum < 100 ? true : false);
 }
 
-console.log(lessThen100(3,77));
-
-
-
+console.log(lessThen100(3, 77));
 
 // 8. Buggy Code
 // Description: Your friend created an infinite loop! Help him by fixing the code in the code tab to pass this challenge. Look at the examples below to get an idea of what the function should do.
@@ -330,19 +310,15 @@ console.log(lessThen100(3,77));
 // printArray(3) ➞ [1, 2, 3]
 // printArray(6) ➞ [1, 2, 3, 4, 5, 6]
 
-
 function printArray(number) {
-    var newArray = [];
-    for (var i = 1; i <= number; i++){
-        newArray.push(i);
-    }
-    return newArray;
+  var newArray = [];
+  for (var i = 1; i <= number; i++) {
+    newArray.push(i);
+  }
+  return newArray;
 }
 
 console.log(printArray(6));
-
-
-
 
 // 9. The Farm Problem
 // Description: In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
@@ -360,7 +336,6 @@ console.log(printArray(6));
 
 // console.log(animals(1, 2, 3));
 
-
 // 10. Using the "&&" Operator
 // Description: JavaScript has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
 // function and(a, b) {
@@ -372,7 +347,6 @@ console.log(printArray(6));
 // and(false, true) ➞ false
 // and(false, false) ➞ false
 
-
 // function and(a, b) {
 //     if (a && b ) {
 //         return true;
@@ -383,14 +357,12 @@ console.log(printArray(6));
 
 // console.log(and(false, false));
 
-
 // function and(a, b) {
 //     const result = a & b ? true : false;
 //     return result;
 // }
 
 // console.log(and(false, false));
-
 
 // function findLargestNumber(arr) {
 //     let highest = 0;
@@ -415,22 +387,17 @@ console.log(printArray(6));
 
 // console.log(large(arr));
 
-
-
-
-
 const showTime = (hour) => {
-    if (hour > 0 && hour < 12) {
-        return  hour + 'am'
-    } else if (hour > 12 && hour < 24) {
-        return (hour - 12) + 'pm';
-    } else if (hour === 24) {
-        return '00' + 'pm';
-    } else {
-        return 'please type some number';
-    }
-   
-}
+  if (hour > 0 && hour < 12) {
+    return hour + "am";
+  } else if (hour > 12 && hour < 24) {
+    return hour - 12 + "pm";
+  } else if (hour === 24) {
+    return "00" + "pm";
+  } else {
+    return "please type some number";
+  }
+};
 
 console.log(showTime(22));
 
@@ -449,37 +416,22 @@ console.log(showTime(22));
 //     }
 // }
 
-
-
 // console.log(showTime(25));
-
-
-
-
 
 // function showEvenAndOddNum (arr)  {
 //     let evenAndOddArr = [[], []];
 //     for (let i = 0; i < arr.length; i++) {
 //         if (arr[i] % 2 === 0) {
-//             evenAndOddArr[0].push(arr[i])   
+//             evenAndOddArr[0].push(arr[i])
 //         } else {
 //             evenAndOddArr[1].push(arr[i])
 //         }
-        
+
 //     }
 //     return evenAndOddArr;
 // }
 
 // console.log(showEvenAndOddNum([1, 2, 3, 4, 5, 6, 7, 8, 9]));
-
-
-
-
-
-
-
-
-
 
 // function showEvenAndOddNum(arr) {
 //     let evenArr = [];
@@ -496,10 +448,6 @@ console.log(showTime(22));
 
 // console.log(showEvenAndOddNum([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
-
-
-
-
 // 1. Are the Numbers Equal?
 // Description: Create a function that returns true when num1 is equal to num2; otherwise return false.
 // function isSameNum(num1, num2) {
@@ -512,9 +460,9 @@ console.log(showTime(22));
 // Notes: Don't forget to return the result.
 
 function isSameNum(num1, num2) {
-    return isEqual = num1 === num2 ? true : false;
+  return (isEqual = num1 === num2 ? true : false);
 }
-console.log(isSameNum(4,8));
+console.log(isSameNum(4, 8));
 
 // 2. Football Points
 // Description: Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far.
@@ -531,13 +479,11 @@ console.log(isSameNum(4,8));
 // footballPoints(0, 0, 1) ➞ 0
 // Notes: Inputs will be numbers greater than or equal to 0.
 
-
 function footballPoints(wins, draw, losses) {
-    return (wins * 3) + (draw * 1) + (losses * 0);
+  return wins * 3 + draw * 1 + losses * 0;
 }
 
 console.log(footballPoints(3, 4, 2));
-
 
 // 3. Convert Hours and Minutes into Seconds
 // Description: Write a function that takes two integers (hours, minutes), converts them to seconds, and adds them.
@@ -549,14 +495,11 @@ console.log(footballPoints(3, 4, 2));
 // convert(2, 0) ➞ 7200
 // convert(0, 0) ➞ 0
 
-
 function convert(hours, minute) {
-    return (hours * 60) *60 +(minute * 60);
+  return hours * 60 * 60 + minute * 60;
 }
 
-console.log(convert(1,3));
-
-
+console.log(convert(1, 3));
 
 // 4. Fix the Expression
 // Description: Fix the code in the Code tab so the function returns true if and only if x is equal to 7.
@@ -569,12 +512,9 @@ console.log(convert(1,3));
 // isSeven(7) ➞ true
 
 function isSeven(x) {
-    return x = x == '7' ? true : false;
+  return (x = x == "7" ? true : false);
 }
 console.log(isSeven(7));
-
-
-
 
 // 5. Equality Check
 // Description: In this challenge, you must verify the equality of two different values given the parameters a and b.
@@ -595,13 +535,11 @@ console.log(isSeven(7));
 // checkEquality(1,  1) ➞ true
 // From Jahidul Islam to Everyone:  11:50 PM
 
-
 function checkEquality(a, b) {
-    return x = a === b ? true : false;
+  return (x = a === b ? true : false);
 }
 
 console.log(checkEquality(1, 1));
-
 
 // 6. Profitable Gamble
 // Description: Create a function that takes three arguments prob, prize, pay and returns true if prob * prize > pay; otherwise return false.
@@ -615,7 +553,7 @@ console.log(checkEquality(1, 1));
 // profitableGamble(0.9, 3, 2) ➞ true
 
 function profitableGamble(prob, prize, pay) {
-    return prob * prize > pay;
+  return prob * prize > pay;
 }
 
 console.log(profitableGamble(0.2, 50, 9));
@@ -630,29 +568,48 @@ console.log(profitableGamble(0.2, 50, 9));
 // addUp(13) ➞ 91
 // addUp(600) ➞ 180300
 
-
-
-
 function addUp(num) {
-    let result = 0;
-    for (let i = 1; i <= num; i++){
-       
-        result += i;
-    }
-    
-    return result
+  let result = 0;
+  for (let i = 1; i <= num; i++) {
+    result += i;
+  }
+
+  return result;
 }
 
 console.log(addUp(13));
 
 
 
-function upperCase(str) {
-    let upStr = [];
-    for (let element of str.split(' ')) {
-        upStr.push(element[0].toUpperCase() + element.slice(1))
-    }
-    return upStr.join(' ')
+
+// TODO: Extra problem solving
+
+function multiple(numArr) {
+  let arr = [];
+  for (let i = 0; i < numArr.length; i++) {
+    if (numArr[i] === 0) {
+      numArr[i].toString().split(0);
+    } else if (numArr[i]) {
+      arr.push(numArr[i] * numArr[i]);
+    } 
+  }
+    return arr;
+};
+
+console.log(multiple([0, 1, 0, 2, 3, 4, 5, 0]));
+
+
+function *generator(start, end, step) {
+  let current = start;
+  while (start <= end) {
+    yield current
+    current += step;
+  }
 }
 
-console.log(upperCase('i love programming'));
+const iterator = generator(1, 100, 2);
+console.log(iterator.next());
+console.log(iterator.next());
+
+
+

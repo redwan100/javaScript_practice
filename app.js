@@ -584,13 +584,14 @@ console.log(addUp(13));
 
 // TODO: Extra problem solving
 
+
 function multiple(numArr) {
   let arr = [];
   for (let i = 0; i < numArr.length; i++) {
     if (numArr[i] === 0) {
       numArr[i].toString().split(0);
     } else if (numArr[i]) {
-      arr.push(numArr[i] * numArr[i]);
+      arr.push(numArr[i] * 2);
     } 
   }
     return arr;
@@ -602,11 +603,18 @@ console.log(multiple([0, 1, 0, 2, 3, 4, 5, 0]));
 
 // TODO: Extra problem solving
 
+// #jsproblemsolving
+// #problemsolving
+// মনে করুন একটি string দেয়া আছে এবং সেখানে uppercase, lowercase দুটোই মিশ্রিত। যদি প্রথম character lowercase এর হয় তবে ঐ string এ lower character এর length বের করতে হবে। আর যদি প্রথম character uppercase এর হয় তবে upper character এর length বের করতে হবে।
+// যেমনঃ "BangLAdeSh" -> 4
+// "jaVAscRiPt" -> 6
+// function তৈরি করে কাজ করতে হবে এবং function এর ভিতরে অবশ্যই return statement ব্যাবহার করতে হবে যেন function টি value তে পরিনত হয়।
+
 function getLength(str) {
   let newStr = '';
-  if (str[0] < "Z") {
+  if (str[0] <= "Z") {
     for (let i = 0; i < str.length; i++){
-      if (str[i] < "Z") {
+      if (str[i] <= "Z") {
         newStr += str[i];
       }
     }
@@ -619,14 +627,44 @@ function getLength(str) {
       }
     }
     return `The length of small letter => ${newStr.length}`
-  } else if (newStr.length === 0) {
-    return `please put some string`
-  }
-  
-  
+  }   
 }
 
-console.log(getLength('JaVaScript'));
+console.log(getLength('ZaVaScript'));
 console.log(getLength('prgRrMminG'));
-console.log(getLength(''));
 
+
+
+
+// টাইটেল: Array থেকে ডুপ্লিকেট এলিমেন্ট বাদ দেয়া 
+// এমন একটি ফাঙ্কশন বানাতে হবে যা প্যারামিটার হিসেবে নিবে একটি array  এবং আউটপুট দিবে এমন একটি array যেখানে কোনো ডুপ্লিকেট এলিমেন্ট থাকবে না। 
+// Examples:
+// removeDuplicate (["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ]) --> ["red", "green", "blue", "brown", "orange", "violet" ]
+// removeDuplicate(["mursalin", "jinius", "minhaz", "redwan", "farjana "]) --> ["mursalin", "jinius", "minhaz", "redwan", "farjana "]
+
+const array = ["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ];
+
+// function removeDuplicateName(arr) {
+//   let array = [];
+//   arr.forEach((value) => {
+//     if (!array.includes(value)) {
+//       array.push(value)
+//     }
+//   })
+//   return array;
+// }
+// console.log(removeDuplicateName(array));
+
+
+function removeDuplicateName(arr) {
+  for (let i = 0; i < arr.length; i++){
+    for (let j = i + 1; j < arr.length; j++){
+      if (arr[i] === arr[j]) {
+        arr.splice(j,1)
+      }
+    }
+  }
+  return arr;
+}
+
+console.log(removeDuplicateName(array));

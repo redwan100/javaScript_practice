@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-h1 {
+/* h1 {
   color: white;
   text-align: center;
   background-color: red;
@@ -15,16 +15,12 @@ h1 {
 }
 
 
-
-
 button{
   position: relative;
   padding: 1rem 1.2rem;
   background-color: transparent;
   border: none;
-  /* background-color:salmon; */
   transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  /* border-radius: 5px; */
 }
 
 button::after{
@@ -64,4 +60,4 @@ button:hover::after{
 }
 button:hover::before{
   transform: scale(1);
-}
+} */

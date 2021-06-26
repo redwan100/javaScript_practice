@@ -765,3 +765,165 @@
 // console.log(arr);
 
 
+
+
+// 2. Array of Multiples
+// Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+// function arrayOfMultiples (num, length) {
+	
+// }
+// Examples
+// arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+// arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+// arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+
+// Notes
+// Notice that num is also included in the returned array.
+
+// function arrayOfMultiples(num, length){
+//   let myArr = [];
+//   for (let i = 1; i < length + 1; i++){
+//     myArr.push(num *length[i])
+//   }
+//   return myArr;
+// }
+
+
+
+// console.log(arrayOfMultiples(7, 5));
+
+// TODO: Extra problem solving
+
+// এমন একটি function তৈরী করো যা argument হিসেবে একটি string array নেবে এবং চেক করে দেখবে যে array এর element string এর সাথে কোনো নাম্বার আছে কিনা। যদি থাকে তবে সেই element গুলো আরেকটা array এর মধ্যে নিয়ে return করতে হবে। যেমন - numInStr(["1a", "a", "2b", "b"]) ➞ ["1a", "2b"], এখানে array এর প্রথম element "1a" তে নাম্বার আছে এবং "2b" তে নাম্বার আছে। তাই রিটার্ন হয়েছে ["1a", "2b"], আরো উদাহরণ - numInStr(["abc", "abc10"]) ➞ ["abc10"], numInStr(["abc", "ab10c", "a10bc", "bcd"]) ➞ ["ab10c", "a10bc"], numInStr(["this is a test", "test1"]) ➞ ["test1"]
+// বি.দ্র: অরিজিনাল array কে change করা যাবে না।
+
+// const arr = ["abc", "ab10c", "a10bc", "bcd",'my name is redwan']
+
+// function numInStr(arr) {
+//   let emArray = [];
+//   let num = '0123456789';
+//   for (let i = 0; i < arr.length; i++){
+//     for (let j = 0; j < num.length; j++){
+//       if (arr[i].includes(num[j])) {
+//         emArray.push(arr[i]);
+//         break
+//       }
+//     }
+//   }
+//   return emArray;
+// }
+
+// console.log(numInStr(arr));
+
+
+
+// function findLength(string) {
+//   var result = 0;
+//   for (var i = 0; i < string.length; i++) {
+//     if(string[0] === string[0].toUpperCase()) {
+//       if(string[i] === string[i].toUpperCase()) {
+//           result++
+//       }
+//     }
+//     if(string[0] >= "a" && string[0] <= 'z') {
+//       if(string[i] >= 'a' && string[i] <= 'z') {
+//           result++
+//       }
+//     }
+//   }
+//   return result;
+// }
+// console.log(findLength("BanGladesH"));
+// console.log(findLength("jaVaScripT"));
+
+
+// function findLength(str) {
+//   let length = 0;
+//   for (let i = 0; i < str.length; i++){
+//     if (str[0] === str[0].toUpperCase()) {
+//       if (str[i] === str[i].toUpperCase()) {
+//         length++
+//       }
+//     } else if (str[0] === str[0].toLowerCase()) {
+//       if (str[i] === str[i].toLowerCase()) {
+//         length++
+//       }
+//     } 
+//   }
+//   return length;
+// }
+
+// console.log(findLength('JavaScript'));
+// console.log(findLength('javaScript'));
+
+
+function findLength(str) {
+  let result = 0;
+  for (let i = 0; i < str.length; i++){
+    
+  }
+}
+
+console.log(findLength('javaScript'));
+
+// TODO: Extra Problem solving
+// এমন একটি function বানাও যা argument হিসেবে নিবে ["red", "green", "blue", " teal", "oranged"] এই array-টি। এবং output দিবে যেকোনো একটি element randomly. অর্থাৎ function call হলে কোন একটি element যে output এ আসবে তা আমরা কেউ বলতে পারিনা।
+
+
+function pickRandom(arr){
+  let res = arr[Math.floor(Math.random() * arr.length)]
+  return res;
+}
+
+console.log(pickRandom(["red", "green", "blue", " teal", "orange"]));
+
+
+// TODO: Extra Problem solving
+
+// সবচেয়ে বড় শব্দ খুঁজে বের কর। মনে কর একটি function findLongestWord দেয়া আছে। আমি যদি "find the longest word" pass করি তবে output আসবে longest. কারন, longest word-টি সবচেয়ে বড় শব্দ। আবার "we have to be jinius by our activity" এর string pass করলে output আসতে হবে "activity". কারণ এটি হচ্ছে সবচেয়ে বড় শব্দ। আশাকরি সবাই বুঝতে পেরেছো।
+
+function pickLongestWord(str) {
+  let words = str.split(' ')
+  let longestWord = '';
+
+  for (let element of words) {
+    if (element.length > longestWord.length) {
+      longestWord = element;
+    }
+  }
+  return longestWord;
+}
+
+console.log(pickLongestWord("we have to be genius by our activity"));
+
+// TODO: Another way
+
+function getLongest(str) {
+  let longest = '';
+  let strArr = str.split(' ');
+  strArr.map((ele) => {
+    if (ele.length > longest.length) {
+      longest = ele;
+    }
+  })
+  return longest;
+}
+
+
+console.log(getLongest('i have lots of string'));
+
+
+// TODO: Extra Problem solving
+// "zahid" এই string কে reverse কর। output --> "dihaz"
+
+function reverse(str) {
+  let revStr = '';
+  for (let i = str.length - 1; i >= 0; i--){
+    revStr += str[i];
+  }
+  return revStr;
+}
+
+
+
+console.log(reverse('zahidul islam'));

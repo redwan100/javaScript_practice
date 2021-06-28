@@ -618,7 +618,7 @@
 // removeDuplicate (["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ]) --> ["red", "green", "blue", "brown", "orange", "violet" ]
 // removeDuplicate(["mursalin", "jinius", "minhaz", "redwan", "farjana "]) --> ["mursalin", "jinius", "minhaz", "redwan", "farjana "]
 
-// const array = ["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ];
+const array = ["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ];
 
 // function removeDuplicateName(arr) {
 //   let array = [];
@@ -632,18 +632,18 @@
 // console.log(removeDuplicateName(array));
 
 
-// function removeDuplicateName(arr) {
-//   for (let i = 0; i < arr.length; i++){
-//     for (let j = i + 1; j < arr.length; j++){
-//       if (arr[i] === arr[j]) {
-//         arr.splice(j,1)
-//       }
-//     }
-//   }
-//   return arr;
-// }
+function removeDuplicateName(arr) {
+  for (let i = 0; i < arr.length; i++){
+    for (let j = i + 1; j < arr.length; j++){
+      if (arr[i] === arr[j]) {
+         arr.splice(j, 1);      
+      }
+    }
+  }
+  return arr;
+}
 
-// console.log(removeDuplicateName(array));
+console.log(removeDuplicateName(array));
 
 
 // 3. Check if One Array can be Nested in Another
@@ -857,73 +857,177 @@
 // console.log(findLength('javaScript'));
 
 
-function findLength(str) {
-  let result = 0;
-  for (let i = 0; i < str.length; i++){
-    
-  }
-}
-
-console.log(findLength('javaScript'));
-
 // TODO: Extra Problem solving
 // এমন একটি function বানাও যা argument হিসেবে নিবে ["red", "green", "blue", " teal", "oranged"] এই array-টি। এবং output দিবে যেকোনো একটি element randomly. অর্থাৎ function call হলে কোন একটি element যে output এ আসবে তা আমরা কেউ বলতে পারিনা।
 
 
-function pickRandom(arr){
-  let res = arr[Math.floor(Math.random() * arr.length)]
-  return res;
-}
+// function pickRandom(arr){
+//   let res = arr[Math.floor(Math.random() * arr.length)]
+//   return res;
+// }
 
-console.log(pickRandom(["red", "green", "blue", " teal", "orange"]));
+// console.log(pickRandom(["red", "green", "blue", " teal", "orange"]));
 
 
 // TODO: Extra Problem solving
 
 // সবচেয়ে বড় শব্দ খুঁজে বের কর। মনে কর একটি function findLongestWord দেয়া আছে। আমি যদি "find the longest word" pass করি তবে output আসবে longest. কারন, longest word-টি সবচেয়ে বড় শব্দ। আবার "we have to be jinius by our activity" এর string pass করলে output আসতে হবে "activity". কারণ এটি হচ্ছে সবচেয়ে বড় শব্দ। আশাকরি সবাই বুঝতে পেরেছো।
 
-function pickLongestWord(str) {
-  let words = str.split(' ')
-  let longestWord = '';
+// function pickLongestWord(str) {
+//   let words = str.split(' ')
+//   let longestWord = '';
 
-  for (let element of words) {
-    if (element.length > longestWord.length) {
-      longestWord = element;
-    }
-  }
-  return longestWord;
-}
+//   for (let element of words) {
+//     if (element.length > longestWord.length) {
+//       longestWord = element;
+//     }
+//   }
+//   return longestWord;
+// }
 
-console.log(pickLongestWord("we have to be genius by our activity"));
+// console.log(pickLongestWord("we have to be genius by our activity"));
 
-// TODO: Another way
+// TODO: Another way------------------
 
-function getLongest(str) {
-  let longest = '';
-  let strArr = str.split(' ');
-  strArr.map((ele) => {
-    if (ele.length > longest.length) {
-      longest = ele;
-    }
-  })
-  return longest;
-}
-
-
-console.log(getLongest('i have lots of string'));
+// function pickLongest(str) {
+//   let longest = '';
+//   let strArr = str.split(' ');
+//   strArr.map((ele) => {
+//     if (ele.length > longest.length) {
+//       longest = ele;
+//     }
+//   })
+//   return longest;
+// }
 
 
-// TODO: Extra Problem solving
+// console.log(pickLongest('i have lots of string'));
+
+
+// TODO: Extra Problem solving-------------------------
 // "zahid" এই string কে reverse কর। output --> "dihaz"
 
-function reverse(str) {
-  let revStr = '';
-  for (let i = str.length - 1; i >= 0; i--){
-    revStr += str[i];
+// function reverse(str) {
+//   let revStr = '';
+//   for (let i = str.length - 1; i >= 0; i--){
+//     revStr += str[i];
+//   }
+//   return revStr;
+// }
+
+// console.log(reverse('zahidul islam'));
+
+
+// create a function that takes an argument as string and returns the character which appears the most.
+
+// function mostAppearingChar(str) {
+
+//   let count = 1;
+//   for (let i = 0; i < str.length; i++){
+//     for (let j = i + 1; j < str.length; j++){
+//       if (str[i] === str[j]) {
+//         count++;
+//       }
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(mostAppearingChar('bangladesh')) // --> "a appears 2 times"
+// console.log(mostAppearingChar('beautiful')) // --> "u appears 2 times"
+// console.log(mostAppearingChar('tiktok')) // --> "t and k appears 2 times"
+
+
+
+
+// getString([
+//   [1, 3, 2, 'a', 7, 9, 4, 6, 8],
+//   [4, 9, 8, 2, 6, 1, 'b', 7, 5],
+//   ['c', 'h', 6, 3, 8, 4, 2, 1, 9],
+//   [6, 4, 3, 1, 'd', 8, 7, 9, 2],
+//   [5, 2, 'e', 7, 9, 3, 8, 4, 6],
+//   [9, 8, 7, 4, 2, 'f', 5, 3, 1],
+//   [2, 1, 4, 9, 3, 5, 6, 8, 'g'],
+//   [3, 'h', 5, 8, 1, 7, 9, 2, 4],
+//   [8, 7, 9, 6, 4, 2, 1, 'i', 3]
+// ])
+// function doneOrNot(board) {
+//   //your code goes here
+// }
+// Tomader kaj hochche array gulo theke shudhu matro string gulo niye notun ekti array return korte hobe.
+// result should be like this ----> ["a", "b", "c", " h", "d", "e", "f", "g", "h", "i"]
+// বি.দ্রঃ splice method ব্যবহার করা বাধ্যতামূলক।
+
+ let arr = [
+  [1, 3, 2, 'a', 7, 9, 4, 6, 8],
+  [4, 9, 8, 2, 6, 1, 'b', 7, 5],
+  ['c', 'h', 6, 3, 8, 4, 2, 1, 9],
+  [6, 4, 3, 1, 'd', 8, 7, 9, 2],
+  [5, 2, 'e', 7, 9, 3, 8, 4, 6],
+  [9, 8, 7, 4, 2, 'f', 5, 3, 1],
+  [2, 1, 4, 9, 3, 5, 6, 8, 'g'],
+  [3, 'h', 5, 8, 1, 7, 9, 2, 4],
+  [8, 7, 9, 6, 4, 2, 1, 'i', 3]
+]
+
+// TODO: Problem solving Example 1
+// function getDoneOrNot(arr) {
+  // function getString(arr) {
+  //   arr = arr.flat()
+  //   let temp = [];
+  //   for (let i = 0; i < arr.length; i++){
+  //     if (typeof arr[i] === 'string') {
+  //       temp = temp.concat(arr.splice(i, 1,true))
+  //       // i = i - 1;
+  //     }
+  //   }
+  //   return temp;
+  // }
+  
+  
+  // console.log(getString(arr));
+  
+ 
+// }
+
+
+// TODO: Problem solving Example 2
+
+function getDoneOrNot(arr) {
+  let temp = [];
+  for (let i = 0; i < arr.length; i++){
+    for (let j = 0; j < arr[i].length; j++){
+      if (typeof arr[i][j] === 'string') {
+        temp = temp.concat(arr[i].splice(j,1, true))
+      }
+    }
   }
-  return revStr;
+  return temp;
+}
+console.log(getDoneOrNot(arr));
+
+
+
+
+// largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]])
+// [5, 27, 39, 1001]
+
+const number = [[4, 5, 1, 30], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]];
+
+
+function largestOfFour(num) {
+  let max = -Infinity;
+  let largArrNum = [];
+  for (let i = 0; i < num.length; i++){
+    max = -Infinity
+    for (let j = 0; j < num[i].length; j++){
+      if (num[i][j] > max) {
+        max=num[i][j]
+      }
+    }
+    largArrNum.push(max);
+  }
+  return largArrNum
 }
 
-
-
-console.log(reverse('zahidul islam'));
+console.log(largestOfFour(number));

@@ -1012,22 +1012,43 @@ console.log(getDoneOrNot(arr));
 // largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]])
 // [5, 27, 39, 1001]
 
-const number = [[4, 5, 1, 30], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]];
+// const number = [[4, 5, 1, 30], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]];
 
 
-function largestOfFour(num) {
-  let max = -Infinity;
-  let largArrNum = [];
-  for (let i = 0; i < num.length; i++){
-    max = -Infinity
-    for (let j = 0; j < num[i].length; j++){
-      if (num[i][j] > max) {
-        max=num[i][j]
-      }
+// function largestOfFour(num) {
+//   let max = -Infinity;
+//   let largArrNum = [];
+//   for (let i = 0; i < num.length; i++){
+//     max = -Infinity
+//     for (let j = 0; j < num[i].length; j++){
+//       if (num[i][j] > max) {
+//         max=num[i][j]
+//       }
+//     }
+//     largArrNum.push(max);
+//   }
+//   return largArrNum
+// }
+
+// console.log(largestOfFour(number));
+
+
+var cities = ['Dhaka', 'Chittagong', 'Bogra', 'Dhaka', 'Sylhet', 'Kushtia', 'Faridpur', 'Bogra', 'Chittagong', 'Dinajpur', 'Faridpur']
+// // ['Dhaka', 'Chittagong', 'Bogra', 'Sylhet', 'Kushtia', 'Faridpur', 'Dinajpur']
+
+function removeDuplicate(city) {
+  let unique = [];
+  for (let i = 0; i < city.length; i++) {
+    if (unique.includes(city[i])) {
+      city.splice(i, 1);
+      i = i - 1;
+    } else {
+      unique.push(city[i])
     }
-    largArrNum.push(max);
   }
-  return largArrNum
+  return unique;
 }
 
-console.log(largestOfFour(number));
+
+
+console.log(removeDuplicate(cities))

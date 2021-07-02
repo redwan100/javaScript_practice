@@ -618,7 +618,14 @@
 // removeDuplicate (["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ]) --> ["red", "green", "blue", "brown", "orange", "violet" ]
 // removeDuplicate(["mursalin", "jinius", "minhaz", "redwan", "farjana "]) --> ["mursalin", "jinius", "minhaz", "redwan", "farjana "]
 
-const array = ["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ];
+
+
+// TODO: Problem solving =============
+
+
+
+
+// const array = ["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ];
 
 // function removeDuplicateName(arr) {
 //   let array = [];
@@ -632,18 +639,18 @@ const array = ["red", "green", "blue", "red", "brown", "green", "orange", "orang
 // console.log(removeDuplicateName(array));
 
 
-function removeDuplicateName(arr) {
-  for (let i = 0; i < arr.length; i++){
-    for (let j = i + 1; j < arr.length; j++){
-      if (arr[i] === arr[j]) {
-         arr.splice(j, 1);      
-      }
-    }
-  }
-  return arr;
-}
+// function removeDuplicateName(arr) {
+//   for (let i = 0; i < arr.length; i++){
+//     for (let j = i + 1; j < arr.length; j++){
+//       if (arr[i] === arr[j]) {
+//          arr.splice(j, 1);      
+//       }
+//     }
+//   }
+//   return arr;
+// }
 
-console.log(removeDuplicateName(array));
+// console.log(removeDuplicateName(array));
 
 
 // 3. Check if One Array can be Nested in Another
@@ -993,18 +1000,18 @@ console.log(removeDuplicateName(array));
 
 // TODO: Problem solving Example 2
 
-function getDoneOrNot(arr) {
-  let temp = [];
-  for (let i = 0; i < arr.length; i++){
-    for (let j = 0; j < arr[i].length; j++){
-      if (typeof arr[i][j] === 'string') {
-        temp = temp.concat(arr[i].splice(j,1, true))
-      }
-    }
-  }
-  return temp;
-}
-console.log(getDoneOrNot(arr));
+// function getDoneOrNot(arr) {
+//   let temp = [];
+//   for (let i = 0; i < arr.length; i++){
+//     for (let j = 0; j < arr[i].length; j++){
+//       if (typeof arr[i][j] === 'string') {
+//         temp = temp.concat(arr[i].splice(j,1, true))
+//       }
+//     }
+//   }
+//   return temp;
+// }
+// console.log(getDoneOrNot(arr));
 
 
 
@@ -1033,22 +1040,212 @@ console.log(getDoneOrNot(arr));
 // console.log(largestOfFour(number));
 
 
-var cities = ['Dhaka', 'Chittagong', 'Bogra', 'Dhaka', 'Sylhet', 'Kushtia', 'Faridpur', 'Bogra', 'Chittagong', 'Dinajpur', 'Faridpur']
+// var cities = ['Dhaka', 'Chittagong', 'Bogra', 'Dhaka', 'Sylhet', 'Kushtia', 'Faridpur', 'Bogra', 'Chittagong', 'Dinajpur', 'Faridpur']
 // // ['Dhaka', 'Chittagong', 'Bogra', 'Sylhet', 'Kushtia', 'Faridpur', 'Dinajpur']
 
-function removeDuplicate(city) {
-  let unique = [];
-  for (let i = 0; i < city.length; i++) {
-    if (unique.includes(city[i])) {
-      city.splice(i, 1);
-      i = i - 1;
-    } else {
-      unique.push(city[i])
+// function removeDuplicate(city) {
+//   let unique = [];
+//   for (let i = 0; i < city.length; i++) {
+//     if (unique.includes(city[i])) {
+//       continue;
+//     } else {
+//       unique.push(city[i])
+//     }
+//   }
+//   return unique;
+// }
+
+// function removeDuplicate(city) {
+//   let unique = [];
+//   for (let i = 0; i < city.length; i++){
+//     for (let j = i + 1; j < city.length; j++){
+//       if (city[i] === city[j]) {
+//         city.splice(j, 1);
+//       }
+//     }
+//   }
+//   return city;
+// }
+
+// console.log(removeDuplicate(cities))
+
+
+
+// function getNumber() {
+//   let num = [];
+//   let str = [];
+//   for (let i = 0; i < string.length; i++){
+//     for (let j = 0; j < string[i].length; j++){
+//       if (typeof string[i][j] === 'number') {
+//        num=num.concat(string[i].splice(j,1,true))
+//       }
+//       if (typeof string[i][j] === 'string') {
+//         str=str.concat(string[i].splice(j,1,true))
+//        }
+//     }
+//   }
+//   return [num,str];
+// }
+
+// console.log(getNumber());
+
+
+// উপরে একটি function দেয়া আছে যার দুইটা parameters হলো string, যদি target parameter, str parameter এর শেষে ম্যাচ করে তবে return করতে হবে true, অন্যথায় return হবে false. এর অনেকগুলো test case আছে। সেগুলো আমি এক এক করে দিচ্ছি।
+
+// function endingCheck(str, target) {
+//   return str
+//   }
+  
+//   console.log(endingCheck("Bastain", "n"));
+  
+// function endingCheck(str, target) {
+//   str = str.split(target);
+//   return str[str.length - 1] === '';
+// }
+
+// console.log(endingCheck('redwan','wan'));
+
+// const str = 'redwan';
+// console.log(str.split('a'));
+
+// function checkStr(str, target) {
+//   if (str.includes(target)) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(checkStr('redwan',''));
+
+
+
+
+
+// TODO: Problem solving
+
+// function nestedArray(array, num){
+//   return nestedArray
+// }
+// nestedArray([1,2,3,4,5,6,7,8], 4)
+// output --> [[1,2], [3,4], [5,6], [7,8]]
+
+
+
+// function nestedArray(array, num){
+//   var result = []
+//   var x = 0
+ 
+//   if (array.length % num === 0) {
+//     for(var i = 0; i < array.length; i = i + (array.length / num)) {
+//       result[x] = array.slice(i, i + (array.length / num))
+//       x++;
+//     }
+//   }
+  
+//   return result
+// }
+// console.log(nestedArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2))
+
+
+// TODO: Example 1===========
+
+// function replaceInAlphabeticalOrder(str) {
+//   let arr = str.split('');
+//   let temp = '';
+//   for (let i = 0; i < str.length; i++){
+//     for (let j = i + 1; j < str.length; j++){
+//       if (arr[i] > arr[j]) {
+//         console.log(arr[i]);
+//         console.log(arr[j]);
+//         temp = arr[i] // temp = z
+//         arr[i] = arr[j];
+//         arr[j] = temp;
+//       }      
+//     }
+//   }
+//   return arr.join('');
+  
+// }
+
+// console.log(replaceInAlphabeticalOrder('zahidul'));
+
+
+// TODO: Example 2=========
+
+// function replaceInAlphabeticalOrder(str) {
+//   // code here
+//   var myStr = ''
+//   var mainStr = 'abcdefghijklmnopqrstuvwxyz';
+//   for (var i = 0; i < mainStr.length; i++) {
+//       if (str.includes(mainStr[i])) {
+//           myStr = myStr + mainStr[i]
+//       }
+//   }
+//   return myStr
+// }
+// console.log(replaceInAlphabeticalOrder('zahidul'))
+
+
+
+// TODO: Example 1==============
+// function capitalize(str) {
+//   str = str.toLowerCase()
+//   let word = [];
+//   for (let ele of str.split(' ')) {
+//     word.push(ele[0].toUpperCase() + ele.slice(1))
+//   }
+//   return word.join(' ');
+// }
+
+// console.log(capitalize('i love programTinG'));
+
+
+
+// // TODO: Example 2===========
+
+// function capitalize1(str) {
+//   str = str.toLowerCase();
+//   let word = [];
+//   let arr = str.split(' ');
+//   for (let i = 0; i < arr.length; i++){
+//     word.push(arr[i][0].toUpperCase() + arr[i].slice(1))
+//   }
+//   return word.join(' ')
+// }
+
+// console.log(capitalize1('i love programing'));
+
+
+
+// function getNum(str) {
+//   let temp = [];
+//   for (let i = 0; i < str.length; i++){
+//     for (let j = 0; j < str[i].length; j++){
+//       if (typeof str[i][j] === 'string') {
+//         temp = temp.concat(str[i].splice(j, 1));
+//         i -= i;
+//       }
+//     }
+//   }
+//   return temp
+// }
+
+
+// console.log(getNum(arr));
+
+
+// TODO: Problem solving ---------------:
+function reverse(str) {
+  let rev = '';
+  let alp = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 0; i < alp.length; i++){
+    if (str.includes(alp[i])) {
+      rev += alp[i]
     }
   }
-  return unique;
+
+  return rev;
 }
 
-
-
-console.log(removeDuplicate(cities))
+console.log(reverse('zahidul'));

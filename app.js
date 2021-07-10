@@ -625,8 +625,21 @@
 
 
 
-// const array = ["red", "green", "blue", "red", "brown", "green", "orange", "orange", "violet", "red" ];
+// const array = ["red", "green", "red", "blue", "red", "brown", "green", "orange", "orange", "violet", "red"];
 
+
+// function removeDuplicate(arr) {
+//   let myArr = [];
+//   arr.forEach((item) => {
+//     if (!myArr.includes(item)) {
+//       myArr.push(item)
+//     }
+//   })
+//   return myArr;
+// }
+
+
+// console.log(removeDuplicate(array));
 // function removeDuplicateName(arr) {
 //   let array = [];
 //   arr.forEach((value) => {
@@ -965,17 +978,17 @@
 // result should be like this ----> ["a", "b", "c", " h", "d", "e", "f", "g", "h", "i"]
 // বি.দ্রঃ splice method ব্যবহার করা বাধ্যতামূলক।
 
- let arr = [
-  [1, 3, 2, 'a', 7, 9, 4, 6, 8],
-  [4, 9, 8, 2, 6, 1, 'b', 7, 5],
-  ['c', 'h', 6, 3, 8, 4, 2, 1, 9],
-  [6, 4, 3, 1, 'd', 8, 7, 9, 2],
-  [5, 2, 'e', 7, 9, 3, 8, 4, 6],
-  [9, 8, 7, 4, 2, 'f', 5, 3, 1],
-  [2, 1, 4, 9, 3, 5, 6, 8, 'g'],
-  [3, 'h', 5, 8, 1, 7, 9, 2, 4],
-  [8, 7, 9, 6, 4, 2, 1, 'i', 3]
-]
+//  let arr = [
+//   [1, 3, 2, 'a', 7, 9, 4, 6, 8],
+//   [4, 9, 8, 2, 6, 1, 'b', 7, 5],
+//   ['c', 'h', 6, 3, 8, 4, 2, 1, 9],
+//   [6, 4, 3, 1, 'd', 8, 7, 9, 2],
+//   [5, 2, 'e', 7, 9, 3, 8, 4, 6],
+//   [9, 8, 7, 4, 2, 'f', 5, 3, 1],
+//   [2, 1, 4, 9, 3, 5, 6, 8, 'g'],
+//   [3, 'h', 5, 8, 1, 7, 9, 2, 4],
+//   [8, 7, 9, 6, 4, 2, 1, 'i', 3]
+// ]
 
 // TODO: Problem solving Example 1
 // function getDoneOrNot(arr) {
@@ -1204,17 +1217,17 @@
 
 // // TODO: Example 2===========
 
-// function capitalize1(str) {
-//   str = str.toLowerCase();
-//   let word = [];
-//   let arr = str.split(' ');
-//   for (let i = 0; i < arr.length; i++){
-//     word.push(arr[i][0].toUpperCase() + arr[i].slice(1))
-//   }
-//   return word.join(' ')
-// }
+function capitalize1(str) {
+  str = str.toLowerCase();
+  let word = [];
+  let arr = str.split(' ');
+  for (let i = 0; i < arr.length; i++){
+    word.push(arr[i][0].toUpperCase() + arr[i].slice(1))
+  }
+  return word.join(' ')
+}
 
-// console.log(capitalize1('i love programing'));
+console.log(capitalize1('i love programing. A'));
 
 
 
@@ -1236,16 +1249,190 @@
 
 
 // TODO: Problem solving ---------------:
-function reverse(str) {
-  let rev = '';
-  let alp = 'abcdefghijklmnopqrstuvwxyz';
-  for (let i = 0; i < alp.length; i++){
-    if (str.includes(alp[i])) {
-      rev += alp[i]
-    }
-  }
+// function reverse(str) {
+//   let rev = '';
+//   let alp = 'abcdefghijklmnopqrstuvwxyz';
+//   for (let i = 0; i < alp.length; i++){
+//     if (str.includes(alp[i])) {
+//       rev += alp[i]
+//     }
+//   }
 
-  return rev;
+//   return rev;
+// }
+
+// console.log(reverse('zahidul'));
+
+
+// TODO: Problem solving
+
+//  let arr = [
+//   [1, 3, 2, 'a', 7, 9, 4, 6, 8],
+//   [4, 9, 8, 2, 6, 1, 'b', 7, 5],
+//   ['c', 'h', 6, 3, 8, 4, 2, 1, 9],
+//   [6, 4, 3, 1, 'd', 8, 7, 9, 2],
+//   [5, 2, 'e', 7, 9, 3, 8, 4, 6],
+//   [9, 8, 7, 4, 2, 'f', 5, 3, 1],
+//   [2, 1, 4, 9, 3, 5, 6, 8, 'g'],
+//   [3, 'h', 5, 8, 1, 7, 9, 2, 4],
+//   [8, 7, 9, 6, 4, 2, 1, 'i', 3]
+// ]
+
+// function getStr(arr) {
+//   let res = '';
+//   for (let i = 0; i < arr.length; i++){
+//     for (let j = 0; j < arr[i].length; j++){
+//       if (typeof arr[i][j] === 'string') {
+//         res = res.concat(arr[i].splice(j,1,true))
+//       }
+//     }
+//   }
+
+//   return res;
+// }
+
+// console.log(getStr(arr));
+
+// function getTrueOrFalse(str, target) {
+//   return str.substr(-target.length) === target;
+// }
+
+// console.log(getTrueOrFalse('something is special','al'));
+
+
+const arr = [
+  [1, 24, 3],
+  [1, 2, 53],
+  [1, 55, 3],
+  [1, 5, 3], 
+]
+
+// const getLargeNum = () => {
+//   let max = -Infinity;
+//   let temp = [];
+//   for (let i = 0; i < arr.length; i++){
+//     for (let j = 0; j < arr[i].length; j++){
+//       if (arr[i][j] > max) {
+//         max = arr[i][j]
+//       }
+//     }
+//     temp.push(max)
+//   }
+//   return temp;
+// }
+
+// console.log(getLargeNum());
+
+
+
+
+// function getGCF(a, b) {
+//   let ln = a > b ? a : b
+//   let sn = ln === a ? b : a
+//   let gcf
+//   let remainder = ln % sn // remainder = 10
+
+
+//   for (let i = 0; i < Infinity; i++) {
+//     if (remainder !== 0) {
+//       ln = sn
+//       sn = remainder
+//       remainder = ln % sn
+//       }
+     
+//       if(remainder === 0) {
+//         gcf = sn
+//         break;
+//       }
+//   }
+//   return gcf
+// }
+// console.log(getGCF(24, 4))
+
+
+
+// function myReplace(str, before, after) {
+//   let words = str.split(' ')
+//   for (let i = 0; i < words.length; i++){   
+//     if (words[i] === before) {
+//       if (words[i][0] === words[i][0].toUpperCase()) {
+//         after = after[0].toUpperCase() + after.slice(1)
+//       } else {
+//         after = after[0].toLowerCase() + after.slice(1)
+//       }  
+//       words[i] = after;
+//     }
+//   }
+//   return words.join(' ')
+// }
+
+// console.log(myReplace("Let us get back to more Coding", "Coding", "algorithms")); //should return --> "Let us get back to more Algorithms"
+
+
+// function titleCase(str) {
+//   str = str.toLowerCase()
+//   str = str.split(' ')
+//   var myStr = []
+//   for (var i = 0; i < str.length; i++) {
+//     console.log(str[i])
+//     myStr.push(str[i].charAt(0).toUpperCase() + str[i].slice(1))
+//     // newStr.push(str[i].charAt(0).toLowerCase() + str[i].slice(1)) 
+//     console.log(str[i].slice(1))
+//   }
+//   return myStr.join(' ')
+// }
+// console.log(titleCase("I'm a little tea pot"))
+// console.log(titleCase("sHoRt AnD sToUt"))
+// titleCase("I'm a little tea pot"); // --> "I'm A Little Tea Pot"
+// testCase:-
+// titleCase("sHoRt AnD sToUt") //--> "Short and Stout"
+// titleCase("HERE IS MY HANDLE.HERE IS MY SPOUT") --> "Here Is My Handle. Here Is My Spout"
+// titleCase("bamgladeSH is a-beauTiful Country./WE*love our$COUNTRY")
+
+
+
+
+
+
+
+
+
+// function pairElement(str) {
+// 	const DNA = []
+//   for(const char of str) {
+//     if(char === 'A') {
+//       DNA.push([char, 'T'])
+//     }
+//     if(char === 'T') {
+//       DNA.push([char, 'A'])
+//     }
+//     if(char === 'C') {
+//       DNA.push([char, 'G'])
+//     }
+//     if(char === 'G') {
+//       DNA.push([char, 'C'])
+//     }
+//   }
+//   return DNA
+// }
+
+
+
+console.log(pairElement("ATCGA")) 
+//should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]
+
+pairElement("TTGAG") 
+//should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]
+
+pairElement("CTCTA")
+//should return [["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]]
+
+
+const time = '01:34PM' // <-- 12 hours format time
+
+function formatChange(time) {
+  let amOrPm = 'AM';
 }
 
-console.log(reverse('zahidul'));
+formatChange(time) // 24 hours format time --> "13:34"
+

@@ -1217,17 +1217,17 @@
 
 // // TODO: Example 2===========
 
-function capitalize1(str) {
-  str = str.toLowerCase();
-  let word = [];
-  let arr = str.split(' ');
-  for (let i = 0; i < arr.length; i++){
-    word.push(arr[i][0].toUpperCase() + arr[i].slice(1))
-  }
-  return word.join(' ')
-}
+// function capitalize1(str) {
+//   str = str.toLowerCase();
+//   let word = [];
+//   let arr = str.split(' ');
+//   for (let i = 0; i < arr.length; i++){
+//     word.push(arr[i][0].toUpperCase() + arr[i].slice(1))
+//   }
+//   return word.join(' ')
+// }
 
-console.log(capitalize1('i love programing. A'));
+// console.log(capitalize1('i love programing. A'));
 
 
 
@@ -1300,12 +1300,12 @@ console.log(capitalize1('i love programing. A'));
 // console.log(getTrueOrFalse('something is special','al'));
 
 
-const arr = [
-  [1, 24, 3],
-  [1, 2, 53],
-  [1, 55, 3],
-  [1, 5, 3], 
-]
+// const arr = [
+//   [1, 24, 3],
+//   [1, 2, 53],
+//   [1, 55, 3],
+//   [1, 5, 3], 
+// ]
 
 // const getLargeNum = () => {
 //   let max = -Infinity;
@@ -1418,21 +1418,145 @@ const arr = [
 
 
 
-console.log(pairElement("ATCGA")) 
+// console.log(pairElement("ATCGA")) 
 //should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]
 
-pairElement("TTGAG") 
+// pairElement("TTGAG") 
 //should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]
 
-pairElement("CTCTA")
+// pairElement("CTCTA")
 //should return [["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]]
 
 
-const time = '01:34PM' // <-- 12 hours format time
 
-function formatChange(time) {
-  let amOrPm = 'AM';
+
+
+
+// function convertTo24Hour(time) {
+//   time = time.toUpperCase();
+//   var hours = parseInt(time.substr(0, 2));
+//   if(time.indexOf('AM') != -1 && hours == 12) {
+//       time = time.replace('12', '0');
+//   }
+//   if(time.indexOf('PM')  != -1 && hours < 12) {
+//       time = time.replace(hours, (hours + 12));
+//   }
+//   return time.replace(/(AM|PM)/, '');
+// }
+
+// console.log(convertTo24Hour('1:33pm'));
+
+
+
+// const mixed = [
+//   [1, 2],
+//   [2, 3],
+//   [2, 4]
+// ]
+
+// function getMaxNumber() {
+//   let max = -Infinity;
+//   let maxNum = [];
+//   for (let i = 0; i < mixed.length; i++){
+//     for (let j = i; j < mixed[i].length; j++){
+//       if (mixed[i][j] > max) {
+//         max = mixed[i][j];
+//       }
+//     }
+//     maxNum.push(max)
+//   }
+//   return maxNum;
+// }
+
+
+// console.log(getMaxNumber());
+
+
+
+// ফিবোনাচ্চি নাম্বার সিকুয়েন্স কি? ফিবোনাচ্চি নাম্বার সিকুয়েন্স হচ্ছে একটি নাম্বারের সাথে তার আগের নাম্বার যোগ করলে তার পরের নাম্বারটি  হবে। যেমন - 0, 1, 1, 2, 3, 5, 8, 13, 21, এই সিকুয়েন্সের দিকে লক্ষ্য করো। দ্বিতীয় নাম্বার যদি 1 হয় তবে তৃতীয় নাম্বার হয়েছে 0 + 1 = 1, আবার তৃতীয় নাম্বার যদি 1 হয় তবে চতুর্থ নাম্বার হয়েছে 1 + 1 = 2, আবার চতুর্থ নাম্বার যদি 2 হয় তবে পঞ্চম নাম্বার হয়েছে 1 + 2 = 3, আবার সপ্তম নাম্বার যদি 8 হয় তবে অষ্টম নাম্বার হয়েছে 5 + 8 = 13, এভাবে চলতে থাকবে।  এটাই ফিবোনাচ্চি নাম্বার সিকুয়েন্স। এখন যদি বলা হয় এগারো তম ফিবোনাচ্চি নাম্বার কত? তাহলে উত্তর হবে 55,  এখন তোমার কাজ হচ্ছে এমন একটি ফাঙ্কশন বানাতে হবে যা আর্গুমেন্ট হিসেবে একটি নাম্বার নিবে যা কিনা হবে ফিবোনাচ্চি নাম্বার সিকুয়েন্সের পসিশন। যদি আর্গুমেন্ট হিসেবে 6 দেয়া হয় তবে ফাঙ্কশনটি আউটপুট দিবে 5, কারণ, ফিবোনাচ্চি সিকুয়েন্সের 6 নাম্বার পসিশনে 5 রয়েছে। আবার আর্গুমেন্ট হিসেবে যদি 9 দেয়া হয় তবে আউটপুট আসবে 21, আশা করি সবাই বুঝতে পেরেছো। কয়েকটা টেস্ট কেইস -
+// fibonacci(12) --> 89 
+// fibonacci(😎 --> 13 
+// fibonacci(20) --> 4181
+// রিলেটেড হেল্পফুল সাইট --> https://www.mathsisfun.com/numbers/fibonacci-sequence.html
+// XMA Header Image
+
+// TODO: problem solving
+
+// function sumAll(arr) {
+//   let maxNum = arr[0] > arr[1] ? arr[0] : arr[1];
+//   let minNum = maxNum === arr[0] ? arr[1] : arr[0];
+//   let sum = 0;
+//   for (let i = minNum; i <= maxNum; i++){
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(sumAll([2, 3]));
+
+
+function findMissingLetter(arr) {
+  let res = [];
+  let small = 'abcdefghijklmnopqrstuvwxyz';
+  let cap = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  if (arr[0] === arr[0].toLowerCase()) {
+    for (let i = 0; i < small.length; i++){
+      if (!arr.includes(small[i])) {
+        res.push(small[i])
+      }
+      if (arr.length === i) {
+        break;
+      }
+    }
+  }
+  
+  return res
 }
 
-formatChange(time) // 24 hours format time --> "13:34"
+console.log(findMissingLetter(['a','b','c','f',]));
+
+// TODO: problem solving
+
+function diffArray(arr1, arr2) {
+
+  // return arr1.concat(arr2).filter((item) => {
+  //   return !arr1.includes(item) || !arr2.includes(item) 
+  // })
+    
+}
+
+
+
+
+
+function uniqueInOrder(str) {
+  let res = [];
+
+   
+  for (let i = 0; i < str.length; i++){
+    if (str[i] !== str[i +1]) {
+      res.push(str[i])
+    }
+  }
+  return res
+}
+
+
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB')); // == ['A', 'B', 'C', 'D', 'A', 'B']
+console.log(uniqueInOrder('ABBCcAD'));         // == ['A', 'B', 'C', 'c', 'A', 'D']
+console.log(uniqueInOrder([1,2,2,3,3]));       // == [1,2,3]
+
+
+
+
+function findOutlier(integers){
+  const even = integers.filter((item) => item % 2 === 0);
+  const odd = integers.filter((item) => item % 2 !== 0);
+
+  return even.length === 1 ? even[0] : odd;
+}
+
+
 

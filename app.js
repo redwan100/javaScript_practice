@@ -2,6 +2,8 @@
 //   return parseInt(reversed) * Math.sign(num);
 // };
 
+
+
 // console.log(reversed(-123));
 
 // const reversed = (str) => {
@@ -1171,7 +1173,7 @@
 //       if (arr[i] > arr[j]) {
 //         console.log(arr[i]);
 //         console.log(arr[j]);
-//         temp = arr[i] // temp = z
+//         temp = arr[i]
 //         arr[i] = arr[j];
 //         arr[j] = temp;
 //       }      
@@ -1447,29 +1449,29 @@
 // console.log(convertTo24Hour('1:33pm'));
 
 
+// TODO: get max number problem solve 
+const mixed = [
+  [1, 2],
+  [2, 3],
+  [2, 4]
+]
 
-// const mixed = [
-//   [1, 2],
-//   [2, 3],
-//   [2, 4]
-// ]
-
-// function getMaxNumber() {
-//   let max = -Infinity;
-//   let maxNum = [];
-//   for (let i = 0; i < mixed.length; i++){
-//     for (let j = i; j < mixed[i].length; j++){
-//       if (mixed[i][j] > max) {
-//         max = mixed[i][j];
-//       }
-//     }
-//     maxNum.push(max)
-//   }
-//   return maxNum;
-// }
+function getMaxNumber() {
+  let max = -Infinity;
+  let maxNum = [];
+  for (let i = 0; i < mixed.length; i++){
+    for (let j = i; j < mixed[i].length; j++){
+      if (mixed[i][j] > max) {
+        max = mixed[i][j];
+      }
+    }
+    maxNum.push(max)
+  }
+  return maxNum;
+}
 
 
-// console.log(getMaxNumber());
+console.log(getMaxNumber());
 
 
 
@@ -1535,7 +1537,7 @@ function uniqueInOrder(str) {
 
    
   for (let i = 0; i < str.length; i++){
-    if (str[i] !== str[i +1]) {
+    if (str[i] !== str[i + 1]) {
       res.push(str[i])
     }
   }
@@ -1557,6 +1559,445 @@ function findOutlier(integers){
 
   return even.length === 1 ? even[0] : odd;
 }
+
+
+
+
+// bomb এর ডেনসিটি  হবে। বিষয়টি বুঝিয়ে বলছি -- মনে করো একটি function দেয়া আছে এমন --> function boomIntensity(n) {
+//   // code here 
+// }
+// n হচ্ছে number argument, এখন টেস্ট কেইস গুলো দেখো --
+// --> function boomIntensity(1) // --> "boom"  <-- লক্ষ্য করো "boom" এর সব lowercase 
+// -->  function boomIntensity(6) // --> "Boooooom!"  <-- লক্ষ্য করো  ৬টি জিরো যুক্ত হয়েছে এবং সাথে ! এই চিহ্নটি আছে
+// --> function boomIntensity(4) // --> "Boooom!"  <-- লক্ষ্য করো  ৪টি জিরো যুক্ত হয়েছে এবং সাথে ! এই চিহ্নটি আছে
+// --> function boomIntensity(5) // --> 'BOOOOOM'  <-- লক্ষ্য করো  ৫টি জিরো যুক্ত হয়েছে এবং সম্পূর্ণ স্ট্রিং ক্যাপিটাল। 
+// -->  function boomIntensity(19) // --> 'Booooooooooooooooooom'  <-- লক্ষ্য করো শুধু  ১৯টি জিরো যুক্ত হয়েছে
+
+// এমন আরো অনেক টেস্ট কেইস থাকতে পারে। তোমাকে বুদ্ধি করে সবকিছু করতে হবে।
+
+// function boomIntensity(n) {
+//   let testArr = '';
+//   if (n === 0 || n === 1) {
+//       testArr = 'boom';
+//   } else if (n % 5 === 0 && n !== 5) {
+//       for (let i = 0; i < n; i++) {
+//           testArr = testArr + 'O';
+//       }
+//       testArr = `B${testArr}M!`;
+//   } else if (n === 5) {
+//       for (let i = 0; i < n; i++) {
+//           testArr = testArr + 'O';
+//       }
+//       testArr = `B${testArr}M`;
+//   } else if (n % 2 === 0) {
+//       for (let i = 0; i < n; i++) {
+//           testArr = testArr + 'o';
+//       }
+//       testArr = `B${testArr}m!`;
+//   } else if (!n % 2 === 0 && !n % 5 === 0) {
+//       for (let i = 0; i < n; i++) {
+//           testArr = testArr + 'o';
+//       }
+//       testArr = `B${testArr}m`;
+//   }
+//   return testArr
+// }
+// console.log(boomIntensity(15));
+
+
+// 7 kyu
+
+function sumOfIntegersInString(s){
+  let num = '';
+
+}
+
+
+console.log(sumOfIntegersInString("12.4")); // 16
+console.log(sumOfIntegersInString("h3ll0w0rld")); // 3
+console.log(sumOfIntegersInString("2 + 3 = "));// 5
+
+sumOfIntegersInString("Our company made approximately 1 million in gross revenue last quarter.") // 1
+sumOfIntegersInString("The Great Depression lasted from 1929 to 1939.") // 3868
+sumOfIntegersInString("Dogs are our best friends.") // 0
+sumOfIntegersInString("C4t5 are 4m4z1ng.") // 18
+sumOfIntegersInString("The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog") // 3635
+
+
+
+
+
+
+
+
+
+
+function battle(x, y) {
+  
+}
+
+battle("AAA", "Z") // 'Z'
+battle("ONE", "TWO") // 'TWO'
+battle("ONE", "NEO") // 'Tie'
+battle("FOUR", "FIVE") //'FOUR'
+battle("QWERTY", "ASDFGH") //'QWERTY'
+
+
+
+// Rules:
+// Each character has its own power: A = 1, B = 2, ... Y = 25, Z = 26
+// Only capital characters can and will participate a battle.
+// Only two groups to a fight.
+// Group whose total power (A + B + C + ...) is bigger wins.
+// If the powers are equal, it's a tie.
+
+
+
+// TODO: string position num problem solve 
+
+function battle(x,y) {
+  let alphabet = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let position = '';
+  for(let i = 0; i < x.length; i++){
+      for(let j = 1; j <= alphabet.length; j++){
+          if(x[i] === alphabet[j]){
+              position += j + ' '
+          }
+    }
+    
+  }
+
+  return position
+}
+console.log(battle("REDWAN", "Z"));
+
+
+
+
+
+
+function dropElements(arr, func) {
+  for (var i = 0; i < arr.length; i++) {
+    if (func(arr[i])) {
+      return arr.slice(i)
+    }
+    
+  }
+  return [];
+}
+console.log(dropElements([1, 2, 3], function(n) { return n < 3; }))
+console.log(dropElements([1, 2, 3, 4], function(n) { return n >= 3; }))
+console.log(dropElements([0, 1, 0, 1], function(n) { return n >= 1; }))
+
+
+
+
+
+
+
+function steamrollArray(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++){
+    if (Array.isArray(arr[i])) {
+      result.push(...steamrollArray(arr[i]))
+    } else {
+      result.push(arr[i]);
+    }
+  }
+  return result
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
+
+
+
+
+
+
+
+// function diamondArrays(x) {
+//   let arr = [];
+//   for (let i = 0; i < x.length; i++){
+//     for (let j = i; j < x[i].length; j++){
+      
+//     }
+//   }
+//   return arr;
+// }
+
+
+// console.log(diamondArrays(3) ); // [[1], [2, 2], [3, 3, 3], [2, 2], [1]]
+// console.log(diamondArrays(4)); // [[1], [2, 2], [3, 3, 3], [4, 4, 4, 4], [3, 3, 3], [2, 2], [1]]
+
+
+
+function vertical_to_horizontal(array) {
+    const result = [] // result = [[1, 2, 0, 5]]
+    let temp = [] // []
+    let x = 0 // 1
+  
+    for(let i = 0; i <= array.length; i++) {
+      if(temp.length === array.length) {
+        if(x % 2 === 1){
+            temp.reverse()
+        }
+        result[x] = temp
+        temp = []
+        i = -1
+        x++
+      }else {
+        temp.push(array[i][x])
+        if(temp[0] === undefined) break;
+      }
+    }
+    return result
+  }
+  
+  console.log(vertical_to_horizontal([
+    [1, 2, 3, 7, 9],
+    [2, 4, 8, 1, 5],
+    [0, 7, 5, 8, 6],
+    [5, 9, 4, 2, 7],
+  ]))
+
+
+
+// TODO: removeVowels problem 
+
+function removeVowels(str) {
+  str = str.split('')
+  let vowel = "aeiou"
+  
+ 
+      for (let i = 0; i < str.length; i++) {
+          if(vowel.includes(str[i].toLowerCase())){
+            str.splice(i,1);
+            i = i -1;
+          }
+  }
+  return str.join('')
+}
+console.log(removeVowels('Amar sonar bangla ami tomay valobasi!'))
+
+
+
+// function descendingOrder(num) {
+//   let strNum = String(num).split('');
+//   let temp;
+//   for (let i = 0; i < strNum.length; i++){
+//     for (let j = i + 1; j < strNum.length; j++){
+//       if (strNum[i] > strNum[j]) {
+//        temp = strNum[i]; 
+//        strNum[i] = strNum[j];  
+//        strNum[j] = temp; 
+//       }
+//     }
+//   }
+//   let res = strNum.reverse().join('');
+//   return Number(res);
+// }
+
+
+// console.log(descendingOrder(0)) // 0
+// console.log(descendingOrder(51)) // 51
+// console.log(descendingOrder(1021)) // 2110
+// console.log(descendingOrder(42145)) // 54421
+// console.log(descendingOrder(145263)) // 654321
+
+
+
+
+
+function descendingOrder(n){
+  const newN = String(n).split('')
+  const nums = '1234567890'
+  let result = [] // ["5", "4", "2", "1"]
+  const temp = [] // ["4"]
+
+  for(let i = 0; i < newN.length; i++) {
+    if(!result.includes(newN[i])) {
+      
+      result[nums.indexOf(newN[i])] = newN[i]
+    }else {
+      temp.push(newN[i])
+    }
+  }
+  result = result.filter(Boolean)
+  
+  for(let i = 0; i < temp.length; i++) {
+    const sliced = result.splice(result.indexOf(temp[i]))
+    result.push(temp[i])
+    result = result.concat(sliced)
+  }
+  return result.join('');
+}
+
+console.log(descendingOrder(42145)) // 54421
+
+// TODO: maxMultiple problem solve 
+https://www.codewars.com/kata/5aba780a6a176b029800041c/train/javascript
+
+function maxMultiple(divisor, bound){
+  let res = bound % divisor;
+  return bound - res;
+}
+
+console.log(maxMultiple(2, 7)) // 6
+console.log(maxMultiple(3, 10)) // 9
+console.log(maxMultiple(7, 17)) // 14
+console.log(maxMultiple(10, 50)) // 50
+console.log(maxMultiple(37, 200)) // 185
+console.log(maxMultiple(7, 100)) // 98
+
+
+
+
+// TODO: alphabet war problem solve 
+
+https://www.codewars.com/kata/59377c53e66267c8f6000027/train/javascript 
+
+function alphabetWar(fight){
+  let arr = fight.split('');
+  const leftPowers = {
+    w: 4,
+    p: 3,
+    b: 2,
+    s: 1
+  }
+
+  const rightPowers = {
+    m: 4,
+    q: 3,
+    d: 2,
+    z: 1
+  }
+
+  let left = 0;
+  let right = 0;
+  for (let i = 0; i < arr.length; i++){
+    if (leftPowers[arr[i]]) {
+      left += leftPowers[ arr[i]]
+    }
+    if (rightPowers[arr[i]]) {
+      right +=rightPowers[arr[i]]
+    }
+  }
+
+  if (left > right) {
+   return "Left side wins!"
+  } else if (left < right) {
+    return "Right side wins!"
+  } else {
+    return "Let's fight again!"
+ }
+ 
+}
+
+console.log(alphabetWar("hiapavb")) // Left side wins!
+console.log(alphabetWar("zmpbqm")) // Right side wins!
+console.log(alphabetWar("zdqmwpbs")) // Let's fight again!
+
+
+
+// TODO: last survivor problem solve 
+// https://www.codewars.com/kata/609eee71109f860006c377d1/train/javascript
+function lastSurvivor(letters, coords) {
+  let str = letters.split('');
+  for (let i = 0; i < coords.length; i++){
+    str.splice(coords[i], 1);
+  }
+  return str.join('');
+}
+
+console.log(lastSurvivor('kbc', [0, 1])) // "b"
+console.log(lastSurvivor('abc', [1, 1])) // "a"
+console.log(lastSurvivor('zbk', [2, 1])) // "z"
+console.log(lastSurvivor('c', [])) // "c"
+
+
+
+// TODO: gettruenumber problem solve 
+
+// function getTrueNumbers(number) {
+//   let arr = number.split('');
+//   for (let i = 0; i < arr.length; i++){
+//     if (arr[i] === '-') {
+//       return true;
+//     } 
+//   }
+//   return false;
+// }
+
+
+function getTrueNumbers(number) {
+  const regex = /(\([\d]{3})\) \d{3}-\d{4}/g
+  if (number.match(regex)) return true;
+  return false; 
+}
+
+
+console.log(getTrueNumbers("(123) 456-7890") );// "(123) 456-7890" return --> true
+console.log(getTrueNumbers("(1111)555 2345"));  // return --> false
+console.log(getTrueNumbers("(098) 123 4567") );// return --> false
+
+const matrix = [
+  [1, 2],
+  [2, 3],
+  [3, 4]
+]
+
+const resultV = matrix.reduce((acc, cur) => {
+  return acc.map((v, i)=> cur[i] + v)
+})
+
+console.log(resultV);
+const resultH = matrix.map((row) => {
+  return row.reduce((acc, cur) => acc + cur);
+})
+console.log(resultH);
+
+
+
+const arr = [11, 23, 3];
+
+const myobj = [
+  { name: 'redwan', id: 2 },
+  { name: 'farid', id: 1 },
+  {name: 'israfil', id:3 }
+]
+const linearSearchCb = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++){
+    if (cb(arr[i])) {
+      return i;
+    }
+  }
+  return -1
+}
+
+const s = linearSearchCb(myobj, (item) => item.name === 'israfil');
+
+console.log(s);
+
+
+const binarySeacrh = (arr,key) => {
+  let lowest = 0;
+  let highest = arr.length - 1;
+  
+  while (lowest <= highest) {
+    let mid = Math.floor((lowest + highest) / 2);
+    if (arr[mid] === key) return mid;
+    if (arr[mid] < key) lowest = mid + 1;
+    if (arr[mid] > key) highest = mid - 1;
+  }
+  return -1;
+}
+arr.sort((a, b) => {
+  return a - b;
+})
+
+console.log(arr);
+const s2 = binarySeacrh(arr, 11);
+console.log(s2);
 
 
 

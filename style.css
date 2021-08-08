@@ -18,3 +18,14 @@
   height: 5px;
   background-color: black;
 }
+
+
+
+
+.sunglass{
+  width: 140px;
+  height: 145px;
+  background-color: dimgray;
+  border: 4px solid currentColor;
+  border-radius: 47% 53% 52% 48% / 44% 45% 55% 56% ;
+}

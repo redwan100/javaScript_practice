@@ -1449,29 +1449,7 @@
 // console.log(convertTo24Hour('1:33pm'));
 
 
-// TODO: get max number problem solve 
-const mixed = [
-  [1, 2],
-  [2, 3],
-  [2, 4]
-]
 
-function getMaxNumber() {
-  let max = -Infinity;
-  let maxNum = [];
-  for (let i = 0; i < mixed.length; i++){
-    for (let j = i; j < mixed[i].length; j++){
-      if (mixed[i][j] > max) {
-        max = mixed[i][j];
-      }
-    }
-    maxNum.push(max)
-  }
-  return maxNum;
-}
-
-
-console.log(getMaxNumber());
 
 
 
@@ -1940,64 +1918,177 @@ console.log(getTrueNumbers("(123) 456-7890") );// "(123) 456-7890" return --> tr
 console.log(getTrueNumbers("(1111)555 2345"));  // return --> false
 console.log(getTrueNumbers("(098) 123 4567") );// return --> false
 
-const matrix = [
-  [1, 2],
-  [2, 3],
-  [3, 4]
-]
+// const matrix = [
+//   [1, 2],
+//   [2, 3],
+//   [3, 4]
+// ]
 
-const resultV = matrix.reduce((acc, cur) => {
-  return acc.map((v, i)=> cur[i] + v)
-})
+// const resultV = matrix.reduce((acc, cur) => {
+//   return acc.map((v, i)=> cur[i] + v)
+// })
 
-console.log(resultV);
-const resultH = matrix.map((row) => {
-  return row.reduce((acc, cur) => acc + cur);
-})
-console.log(resultH);
+// console.log(resultV);
+// const resultH = matrix.map((row) => {
+//   return row.reduce((acc, cur) => acc + cur);
+// })
+// console.log(resultH);
 
 
 
-const arr = [11, 23, 3];
 
-const myobj = [
-  { name: 'redwan', id: 2 },
-  { name: 'farid', id: 1 },
-  {name: 'israfil', id:3 }
-]
-const linearSearchCb = (arr, cb) => {
-  for (let i = 0; i < arr.length; i++){
-    if (cb(arr[i])) {
-      return i;
+// const myobj = [
+//   { name: 'redwan', id: 2 },
+//   { name: 'farid', id: 1 },
+//   {name: 'israfil', id:3 }
+// ]
+// const linearSearchCb = (arr, cb) => {
+//   for (let i = 0; i < arr.length; i++){
+//     if (cb(arr[i])) {
+//       return i;
+//     }
+//   }
+//   return -1
+// }
+
+// const s = linearSearchCb(myobj, (item) => item.name === 'israfil');
+
+
+
+// const binarySeacrh = (arr,key) => {
+//   let lowest = 0;
+//   let highest = arr.length - 1;
+  
+//   while (lowest <= highest) {
+//     let mid = Math.floor((lowest + highest) / 2);
+//     if (arr[mid] === key) return mid;
+//     if (arr[mid] < key) lowest = mid + 1;
+//     if (arr[mid] > key) highest = mid - 1;
+//   }
+//   return -1;
+// } 
+
+
+
+
+
+
+// https://www.codewars.com/kata/5262119038c0985a5b00029f/train/javascript
+
+function isPrime(num) {
+  let isPrime = false;
+  if (num === 1) {
+    isPrime = false;
+  }else if (num < 1) {
+    isPrime = false;
+  } else {
+    for (let i = 2; i < num; i++){
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      } else {
+        isPrime = true;
+      }
     }
   }
-  return -1
-}
-
-const s = linearSearchCb(myobj, (item) => item.name === 'israfil');
-
-console.log(s);
-
-
-const binarySeacrh = (arr,key) => {
-  let lowest = 0;
-  let highest = arr.length - 1;
   
-  while (lowest <= highest) {
-    let mid = Math.floor((lowest + highest) / 2);
-    if (arr[mid] === key) return mid;
-    if (arr[mid] < key) lowest = mid + 1;
-    if (arr[mid] > key) highest = mid - 1;
-  }
-  return -1;
+  return isPrime;
 }
-arr.sort((a, b) => {
-  return a - b;
-})
 
-console.log(arr);
-const s2 = binarySeacrh(arr, 11);
-console.log(s2);
+console.log(isPrime(41));
+
+// https://www.codewars.com/kata/52aae14aa7fd03d57400058f/train/javascript
 
 
 
+
+
+
+
+
+
+
+
+function loopArr(arr, direction, steps) {
+  let res = [];
+  
+  if (direction === 'left') {
+    let sliced = arr.splice(steps);
+    res.push(`${sliced},${arr}`)
+  }
+  if (direction === 'right') {
+    let sliced = arr.splice(arr.length - steps);
+    res.push(`${sliced},${arr}`)
+  }
+  return res;
+}
+console.log(loopArr([1, 5, 87, 45, 8, 8], 'left', 2));
+
+
+
+
+function quotable(name, quote){
+  
+  return `${name} said: "${quote}"`;
+}
+
+console.log(quotable('redwan', 'i love programming'));
+
+
+
+
+// function digital_root(n) {
+//   let numArr = String(n)
+//   let temp = 0 //10
+//   for (let i = 0; i < numArr.length; i++) {
+//     temp = temp + Number(numArr[i])
+//    // console.log(temp)
+//     if(i === numArr.length - 1 && temp > 9) {
+//        return digital_root(temp)
+//       //console.log(temp)
+//     }
+//   }
+
+//   return temp
+// }
+
+// console.log(digital_root(234));
+
+
+function digital_root(n) {
+  let numArr = String(n).split('')
+  let temp = 0
+  let result = 0
+  for (let i = 0; i < numArr.length; i++) {
+    temp = temp + Number(numArr[i])
+  }
+  let sum = String(temp).split('')
+  temp = 0
+  for (let i = 0; i < sum.length; i++) {
+    temp = temp + Number(sum[i])
+  }
+  sum = String(temp).split('')
+  temp = 0
+  for (let i = 0; i < sum.length; i++) {
+    temp = temp + Number(sum[i])
+  }
+
+  return Number(temp)
+}
+
+console.log(digital_root(123));
+
+let vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+function getVowel(sentence) {
+  let count = 0;
+  const letters = sentence.split('');
+  letters.forEach((value) => {
+    if (vowel.includes(value)) {
+      count++
+    }
+  })
+  return count;
+}
+
+console.log(getVowel('I love programming'));

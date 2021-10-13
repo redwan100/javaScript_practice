@@ -2092,3 +2092,30 @@ function getVowel(sentence) {
 }
 
 console.log(getVowel('I love programming'));
+
+// const numbers = [1, 2, 3, 4, 1, 2, 3, 2, 1, 1, 5];
+
+// const duplicate = numbers.filter((number, index, array) => {
+//   return array.indexOf(number) === index;
+// })
+// console.log(duplicate);
+
+
+
+// const linear = (arr, value) => {
+//   const length = arr.length;
+//   for (let i = 0; i < length; i++){
+//     if (arr[i] === value) {
+//       return i;
+//     }
+//   }
+//   return 'Not found';
+// }
+
+// console.log(linear([1, 2, 3, 4, 5], 3));
+
+
+
+
+
+console.clear();

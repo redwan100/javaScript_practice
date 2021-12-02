@@ -1,10 +1,16 @@
-//   let reversed = num.toString().split("").reverse().join("");
-//   return parseInt(reversed) * Math.sign(num);
-// };
+function reversed(num) {
+  let reversed = num.toString().split("").reverse().join("");
+  return parseInt(reversed) * Math.sign(num);
+  }
 
 
+const s = '12';
+const t = parseInt(s)
 
-// console.log(reversed(-123));
+console.log(typeof s);
+console.log(typeof t);
+
+console.log(reversed(-123));
 
 // const reversed = (str) => {
 //   let rev = str.split(" ").reverse().join();
@@ -1633,21 +1639,21 @@ battle("QWERTY", "ASDFGH") //'QWERTY'
 
 // TODO: string position num problem solve 
 
-function battle(x,y) {
-  let alphabet = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let position = '';
-  for(let i = 0; i < x.length; i++){
-      for(let j = 1; j <= alphabet.length; j++){
-          if(x[i] === alphabet[j]){
-              position += j + ' '
-          }
-    }
+// function battle(x,y) {
+//   let alphabet = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//   let position = '';
+//   for(let i = 0; i < x.length; i++){
+//       for(let j = 1; j <= alphabet.length; j++){
+//           if(x[i] === alphabet[j]){
+//             position += j + ' '
+//           }
+//     }
     
-  }
+//   }
 
-  return position
-}
-console.log(battle("REDWAN", "Z"));
+//   return position
+// }
+// console.log(battle("REDWAN"));
 
 
 
@@ -2091,6 +2097,7 @@ function getVowel(sentence) {
   return count;
 }
 
+
 console.log(getVowel('I love programming'));
 
 // const numbers = [1, 2, 3, 4, 1, 2, 3, 2, 1, 1, 5];
@@ -2117,5 +2124,537 @@ console.log(getVowel('I love programming'));
 
 
 
+const obj = {
+  a:'Name',
+  b:false,
+  c:undefined,
+  d:true,
+  e:NaN,
+  f:30 
+}
 
-console.clear();
+function trueValue(object) {
+  for (i in object) {
+    if (!object[i]) {
+      delete object[i]
+    }
+  }
+
+  return object
+}
+
+
+console.log(trueValue(obj));
+
+
+
+
+
+
+
+
+
+const arr1 = [1, 2, 3];
+const arr2 = [1, 2, 3];
+
+
+
+
+// function addTwoNumbers2(l1, l2) {
+
+//     let num1 = '';
+//     let num2 = '';
+//     let result = [];
+//     for (let i = 0; i < l1.length; i++) {
+//         num1 = l1[i] + num1;
+//     }
+//     for (let i = 0; i < l2.length; i++) {
+//         num2 = l2[i] + num2;
+//     }
+//     let sum = Number(num1) + Number(num2);
+//     let temp = String(sum);
+//     for (let i = 0; i < temp.length; i++) {
+//         result.push(Number(temp[i]))
+//     }
+//     return result.reverse()
+// }
+// console.log(addTwoNumbers2([2, 4, 3], [5, 6, 4]));
+
+
+
+const arr = [
+  ['a', 0, 'b'],
+  ['c','a', 'b'],
+  ['a', 3, 'b'],
+  ['a', 'c', 1],
+]
+
+function getNumber() {
+  let res = [];
+  for (let i = 0; i < arr.length; i++){
+    for (let j = 0; j < arr[i].length; j++){
+      if (typeof arr[i][j] === 'number') {
+        res.push(arr[j])
+      }
+    }
+  }
+
+  return res;
+}
+
+
+console.log(getNumber());
+
+
+
+
+function narcissistic(value) {
+  // Code me to return true or false
+  let str = value.toString().split('');
+  let res = 0;
+
+  str.map((s) => {
+    res += Math.pow(Number(s), str.length)
+  })
+ 
+ 
+  return res === value ? true : false;
+}
+
+console.log(narcissistic(371));
+
+
+
+
+// function fibonacci(number) {
+//   const res = [0, 1];
+//   for (let i = 2; i <= number; i++){
+//     res[i] = res[i - 2] + res[i - 1];
+//   }
+//   return res;
+// }
+
+// console.log(fibonacci(10));
+
+
+
+
+
+
+// let phrase = "I like codewars! It makes me happy.";
+// console.log(phrase.slice(2,6));
+
+//     function insertIndex(phrase, word, indexes) {
+        
+
+//       let str = `${phrase.slice(0, indexes[0])} ${word} ${phrase.slice(indexes[0])}`
+
+//       let str2 = `${str.slice(0, indexes[1])} ${word} ${str.slice(indexes[1])}`
+
+//       return str2;
+// }
+    
+
+//     console.log(insertIndex(phrase, 'really', [1, 28])) //Result --> "I really like codewars! It makes me really happy."
+
+
+
+
+
+// function findMedianSortedArrays(nums1, nums2) {
+  
+//    const concats = nums1.concat(nums2);
+//    concats.sort((a, b) => a - b);
+   
+//    const median = Math.floor(concats.length / 2);
+//    if (concats.length % 2 === 1) {
+//      return concats[median].toFixed(5)
+//    } else {   
+//      const res = (concats[median - 1] + concats[median]) / 2;
+//      return res.toFixed(4)
+//   }
+  
+// };
+
+
+// console.log(findMedianSortedArrays([1, 3], [2, 4, 8]));
+
+
+
+ 
+// [1, 3, 2, 5, 7, 4, 9, 6, 8, 10];
+
+
+
+
+
+
+// function a(arr) {
+//   let oddArr = []
+//   let evenArr = []
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 !== 0) {
+//       oddArr.push(arr[i])
+//     } else {
+//       evenArr.push(arr[i])
+//     }
+//   }
+
+//   for (let j = 2; j < oddArr.length; j = j + 2) {
+//     console.log(oddArr[j], j);
+//     let cut = oddArr.splice(j)
+//     oddArr.push(...evenArr.splice(0, 1))
+//     oddArr = oddArr.concat(cut)
+
+//     if (j === 2) {
+//       j = j + 1
+//     }
+//   }
+
+//   oddArr = oddArr.concat(...evenArr.splice(0))
+//   return oddArr
+// }
+
+// console.log(a(array))
+
+
+
+
+// TODO: PROBLEME SOLVING
+
+
+function evenOdd(arr) {
+  let odd = [];
+  let even = [];
+
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] % 2 !== 0) {
+      odd.push(arr[i]);
+    } else {
+      even.push(arr[i]);
+    }
+  }
+
+  for (let i = 0; i < arr.length; i++){
+    if (i % 2 === 0) {
+      result.push(...odd.splice(0, 2))
+    } else {
+      result.push(...even.splice(0, 1))
+    }
+  }
+
+  return result;
+}
+
+console.log(evenOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+
+
+// TODO: PROBLEME SOLVING
+
+
+// const evenOdd = (arr) => {
+//   let evenNum = [];
+//   let oddNum = [];
+//   let result = [];
+//   for(let i = 0; i < arr.length; i++){
+//     if(arr[i] % 2 === 0){
+//       evenNum.push(arr[i])
+//     }else{
+//       oddNum.push(arr[i])
+//     }
+//   }
+//   for(let i = 0; i < arr.length; i++){
+//     if(i % 2 === 0){
+//       result.push(...oddNum.splice(0,2))
+//     }else{
+//       result.push(...evenNum.splice(0,1))
+//     }
+//   }
+//   return result
+// }
+// console.log(evenOdd([1,2,5,6,7,8,9,10]))
+
+
+// function abTest(a, b) {
+//   // Only change code below this line
+
+//   if (a < 0 || b < 0) {
+//     return undefined;
+//   }
+
+
+//   // Only change code above this line
+
+//   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+// }
+
+// console.log(abTest(2,3));
+
+
+// TODO: PROBLEME SOLVING
+
+let count = 0;
+
+function cardSequence(card) {
+  
+switch (card) {
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+    count ++;
+    break;
+  case 7:
+  case 8:
+  case 9:
+    count = 0;
+    break;
+  
+  case 10:
+  case 'J':
+  case 'Q':
+  case 'K':
+  case 'A':
+    count --;
+    break
+  }
+  
+console.log(count);
+  if (count > 0) {
+    return count + " Bet"
+  } else {
+    return count + ' Hold'
+  }
+  
+
+}
+
+
+console.log(cardSequence(10), cardSequence(3), cardSequence(4), cardSequence(6));
+
+
+
+// TODO: PROBLEME SOLVING
+
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+
+  
+  return records;
+}
+
+console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+
+
+// TODO: PROBLEME SOLVING
+
+function palindrome(str) {
+  let isPalindrome = false;
+  let strArr = str.split('');
+  for (let i = 0; i < strArr.length; i++){
+    if (strArr[i] !== strArr[strArr.length - 1 - i]) {
+      isPalindrome = false;
+      break;
+    }
+    isPalindrome = true;
+  }
+
+  return isPalindrome
+}
+
+console.log(palindrome('abba'));
+
+
+
+
+function updateRecords(records, id, prop, value) {
+  
+  if(prop !== 'tracks' && value !== '') {
+    records[id][prop] = value;
+  }else if(prop === 'tracks' && records[id].hasOwnProperty('tracks') === false) {
+    records[id][prop] = [value]
+  }else if(prop === 'tracks' && value !== '') {
+    records[id][prop].push(value)
+  }else if(value === '') {
+    delete records[id][prop]
+  }
+  console.log(records)
+  return records
+}
+
+
+
+
+
+
+
+
+
+
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+
+
+function lookUpProfile(name, prop) {
+  for (let i = 0; i < contacts.length; i++){
+    if (contacts[i]['firstName'] === name) {
+      if (contacts[i].hasOwnProperty(prop)) {
+        return contacts[i][prop];
+      }
+      return 'No such property';
+    }
+  }
+  return 'No such contact';
+}
+
+console.log(lookUpProfile('Harry', 'likes'));
+
+
+
+
+const number = [[4, 5, 1, 30], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]];
+
+function perimeterSequence(a,n) {
+  // your code
+  return a * 4 * n;
+}
+
+console.log(1,3);
+
+
+
+
+
+// // https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/javascript
+
+// function bouncingBall(h,  bounce,  window) {
+//   // your code here
+//   if (h > 0 && bounce < 1 && bounce > 0 && window < h) {
+    
+//   } else {
+//     return -1;
+//   }
+// }
+
+// console.log(bouncingBall(3.0, 0.66, 1.5));
+
+
+
+
+
+// TODO: ALPHABET POSITION PROBLEM SOLVE 
+
+function alphabetPosition(text) {
+  let alphabet = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let position = '';
+  for (let i = 0; i < text.length; i++){
+    for (let j = 1; j < alphabet.length; j++){
+      if (text[i].toLowerCase() === alphabet[j].toLocaleLowerCase()) {
+        position += j + ' ';
+      }
+    }
+  }
+
+  return position;
+}
+
+console.log(alphabetPosition('ZAHIDUL'));
+
+
+
+//  const number = [[4, 5, 1, 30], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]];
+
+
+
+function largestNum(num) {
+  let largeNumArr = [];
+  for (let i = 0; i < num.length; i++){
+   let max = -Infinity;
+    for (let j = 1; j < num[i].length; j++){
+      if (num[i][j] > max) {
+        max = num[i][j]
+      }
+    }
+
+    largeNumArr.push(max)
+  }
+
+  return largeNumArr;
+}
+
+console.log(largestNum([[4, 5, 1, 30], [13, 40, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+
+
+{
+function sequenceSum(begin, end, step) {
+  //your code here
+  let sum = 0;
+
+  if (begin > end ) {
+    return 0;
+  } else if (begin === end) {
+    return begin;
+  } else {
+    
+    for (let i = begin; i <= end; i += step){
+      sum += i
+    }
+    return sum;
+  }
+}
+
+console.log(sequenceSum(2, 6, 2));
+
+}
